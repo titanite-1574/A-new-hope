@@ -1,0 +1,53 @@
+type: UnitAssembler
+name: Mech Assembler
+description: Assembles block and units with cryofluid to produce T4-5-6 mechs
+size: 5
+health: 1500
+category: units
+droneType: novaris
+areaSize: 13
+research: reformer
+requirements: [
+  titanium/1000
+  graphite/1000
+  termidium-metal/900
+  terala/900
+  florixite/900
+]
+plans: [
+  {
+    type: AssemblerUnitPlan
+    unit: 01d-contention
+    requirements: [
+      a-new-hope-02b-large-reinforced-titanium-wall/10
+      a-new-hope-09a-armal/3
+      a-new-hope-01a-war/5
+    ]
+    time: 3300
+  }
+  {
+    type: AssemblerUnitPlan
+    unit: 01e-declare
+    requirements: [
+      a-new-hope-01b-conflict/5
+      a-new-hope-02d-large-terala-wall/15
+    ]
+    time: 4200
+  },
+  {
+   type: AssemblerUnitPlan
+   unit: 01f-dread
+   requirements: [
+     a-new-hope-01c-dispute/5
+     a-new-hope-02f-large-holosteel-wall/15
+     a-new-hope-09b-blix/5
+   ]
+   time: 6000
+  }
+]
+squareSprite: false
+consumes: {
+  power: 5
+  liquid: cryofluid/0.5
+}
+researchCostMultiplier: 0.5

@@ -1,0 +1,22 @@
+type: ShieldWall
+name: Holosteel Wall
+description: A shield wall made from holosteel
+size: 1
+health: 1600
+armor: 7.5
+outputsPower: false
+hasPower: true
+consumePower: true
+conductivePower: true
+chanceDeflect: 15
+shieldHealth: 800
+requirements: [
+  titanium/24
+  holosteel/16
+]
+consumes: {
+  power: 0.1
+}
+research: 02d-terala-wall
+researchCostMultiplier: 0.5
+category: defense

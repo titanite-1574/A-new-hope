@@ -1,0 +1,177 @@
+size: 4
+description: A powerful railgun that can reach a large distance
+name: Holostar
+type: ItemTurret
+rotateSpeed: 1
+shootCone: 1
+reload: 500
+recoil: 7
+cooldownTime: 360
+recoilTime: 230
+minWarmup: 0.9
+shootSound: shockBlast
+range: 1000
+shootY: 3.25
+smokeEffect: none
+ammoUseEffect: none
+ammoPerShot: 4
+maxAmmo: 60
+ammoTypes: {
+    termidium-metal: {
+        type: BasicBulletType
+        width: 18
+        height: 18
+        sprite: a-new-hope-holostar-star 
+        speed: 30
+        lifetime: 37
+        damage: 500
+        backColor: ffffff
+        frontColor: ffffff
+        hitColor: ffffff
+        trailColor: ffffff
+        trailWidth: 6
+        trailLength: 40
+        trailChance: 100
+        hitEffect: {
+            type: WaveEffect
+            sides: 0
+            lifetime: 10
+            sizeFrom: 0
+            sizeTo: 50
+            strokeFrom: 7
+            strokeTo: 0
+        }
+        despawnEffect: {
+            type: WaveEffect
+            sides: 0
+            lifetime: 20
+            sizeFrom: 0
+            sizeTo: 30
+            strokeFrom: 7
+            strokeTo: 0
+        }
+        shootEffect: {
+            type: WaveEffect
+            sides: 0
+            lifetime: 10
+            sizeFrom: 0
+            sizeTo: 50
+            strokeFrom: 7
+            strokeTo: 0
+        }
+        shrinkX: 0
+        shrinkY: 0
+        trailEffect: [
+            disperseTrail, 
+            {
+                type: ParticleEffect
+                particles: 1
+                length: 0
+                region: a-new-hope-holostar-bullet
+                lifetime: 16
+                sizeFrom: 25
+                baseRotation: 90
+                rotWithParent: true
+                sizeTo: 5
+                colorFrom: ffffff
+                colorTo: ffffff00
+                trailRotation: true
+        smokeEffect: shootSmokeDisperse
+            }
+        ]
+    }
+}
+drawer: {
+    type: DrawTurret
+    basePrefix: "holostar-"
+    parts: [
+        {
+            type: RegionPart
+            suffix: -bladea
+            mirror: true
+            moveX: 2
+            moveY: 0
+            moveRot: -10
+            heatLayerOffset: -0.001
+            under: true
+            heatColor: 87ceeb
+            progress: warmup
+        }
+        {
+            type: RegionPart
+            suffix: -bladeb
+            mirror: true
+            moveX: 2
+            moveY: 0
+            moveRot: -10
+            heatLayerOffset: -0.001
+            under: true
+            heatColor: 87ceeb
+            progress: warmup
+        }
+        {
+      type: ShapePart
+      y: -13.5
+      radius: 6.5
+      stroke: 0
+      strokeTo: 1
+      layer: 110
+      circle: true
+      hollow: true
+      color: FFFFFF
+    }
+    {
+      type: ShapePart
+      y: -13.5
+      radius: 10
+      stroke: 0
+      strokeTo: 1.5
+      layer: 110
+      circle: true
+      hollow: true
+      color: 7A8CDC
+    }
+    {
+      type: HaloPart
+      layer: 110
+      color: 7A8CDC
+      y: -13.5
+      haloRotateSpeed: 1
+      sides: 3
+      haloRadius: 10
+      radius: 4.5
+      hollow: false
+      tri: true
+      triLength: 0
+      triLengthTo: 14
+     }
+     {
+     type: HaloPart
+     layer: 110
+     color: 7A8CDC
+     y: -13.5
+     haloRotateSpeed: 1.5
+     sides: 3
+     haloRadius: 5
+     radius: 4
+     hollow: false
+     tri: true
+     triLength: 0
+     triLengthTo: 20
+        }
+    ]
+}
+scaledHealth: 360
+shake: 10
+consumes: {
+    power: 8
+}
+category: turret
+requirements: [
+    titanium/400
+    graphite/400
+    termidium-metal/340
+    holosteel/100
+]
+shownPlanets: [Stella]
+research: 08a-Tiradnium 

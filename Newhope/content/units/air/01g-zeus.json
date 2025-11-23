@@ -1,0 +1,385 @@
+{
+  name: Zeus
+  description : The king of Stella's sky,powered by 3 nuclear reactors and equipped with powerful cannons,missile and an energy field. It is classified as an Elion class unit due to it's sheer size and insane health . This is only the beginning but what are the Elions for, destroying bases or defending Stella from something?
+  shownPlanets: [Stella]
+    "research": {
+    "parent": "01f-dread",
+    "requirements": [
+      "graphite/2000",
+      "titanium/2500"
+      "termidium-metal/500"
+    ]
+  },
+  "type": "flying",
+  "lowAltitude": true,
+  "speed": 0.2,
+  "accel": 0.5,
+  "drag": 0.02,
+  "flying": true,
+  "health": 100000,
+  "hitSize": 100,
+  "armor": 45,
+  "itemCapacity": 0,
+  "outlineColor": "595959",
+  "engineOffset": 45,
+  "engineSize": 10,
+  "engineColor": "8AA3F4",
+  "rotateSpeed": 0.5,
+  abilities: [
+{
+type: RegenAbility
+amount: 1.2
+}
+{
+type: SpawnDeathAbility
+unit: boom
+spread: 0
+}
+]
+"parts": [
+{
+        type: RegionPart
+        suffix: -reactor
+        blending: additive
+        color: ff0000
+        mirror: false
+        outline: false
+        layer: 70.2
+},
+{
+"type": "shapePart",
+"y": -16,
+"x": 29,
+"hollow": true,
+"circle": true,
+"layer": 110,
+"mirror": true,
+"color": "7A8CDC",
+"stroke": 1.2,
+"strokeTo": 1.2,
+"radiusTo": 8,
+"radius": 8
+},
+{
+"type": "shapePart",
+"y": -20,
+"x": 0,
+"hollow": true,
+"circle": true,
+"layer": 110,
+"mirror": false,
+"color": "7A8CDC",
+"stroke": 1.2,
+"strokeTo": 1.2,
+"radiusTo": 8,
+"radius": 8
+},
+ {
+"type": "shapePart",
+"y": -16,
+"x": 29,
+"hollow": true,
+"circle": true,
+"layer": 110,
+"mirror": true,
+"color": "7A8CDC",
+"stroke": 0.5,
+"strokeTo": 0.5,
+"radiusTo": 5,
+"radius": 5
+},
+{
+"type": "HaloPart",
+"y": -16,
+"x": 29,
+"radius": 3,
+"tri": true,
+"layer": 110,
+"color": "7A8CDC",
+"mirror": true,
+"haloRotateSpeed": 0.9,
+"haloRadius": 8,
+"haloRadiusTo": 8,
+"stroke": 2,
+"strokeTo": 2,
+"shapes": 4,
+"triLengthTo": 3,
+"triLength": 3
+}
+],
+  "engines": [
+  {
+    x: -14
+    y: -13
+    radius: 2
+    rotation: -135
+  }
+  {
+    x: 14
+    y: -13
+    radius: 2
+    rotation: -45
+  }
+]
+  "faceTarget": true,
+      "weapons": [
+{
+    type: PointDefenseWeapon
+    name: zeus-anti-bullet
+    x: 30
+    y: 10
+    shake: 2
+    rotate: true
+    rotateSpeed: 999
+    targetSwitchInterval: 1.5
+    targetInterval: 1.2 
+    reload: 10
+    shootSound: laserShoot
+    bullet: {
+      maxRange: 75
+      bulletDamage: 8
+      shootEffect: sparkShoot
+      hitEffect: pointHit
+    }
+  }
+     {
+name: kenetic-flak
+x: 45
+y: 0
+mirror: true
+shoot: {
+type: ShootAlternate
+shots: 3
+spread: 3
+shotDelay: 3
+}
+top: false
+rotate: true
+rotateSpeed: 1
+reload: 45
+recoil: 1
+shootSound: shootAltLong
+ejectEffect: none
+parts: [
+    {
+      type: RegionPart
+      suffix: -barrel-1
+      progress: recoil
+      heatProgress: recoil
+      moveY: -2
+      under: true
+      heatColor: 8DF9D1
+    }
+    {
+      type: RegionPart
+      suffix: -barrel-2
+      mirror: false
+      progress: recoil
+      heatProgress: recoil
+      moveY: -2
+      under: true
+      heatColor: 8DF9D1
+    }
+    {
+      type: RegionPart
+      suffix: -barrel-3
+      mirror: false
+      progress: recoil
+      heatProgress: recoil
+      moveY: -2
+      under: true
+      heatColor: 8DF9D1
+    }
+  ]
+bullet: {
+    type: BasicBulletType,
+    speed: 5
+    lifetime: 30
+    damage: 15
+    width: 7
+    height: 10
+    frontColor: b2afb3
+    backColor: d5d2d6
+    shootEffect: "shootSmall"
+    smokeEffect: "shootSmallSmoke"
+    ammoMultiplier: 5
+    collidesTiles: true
+    hitEffect: pointHit
+    }
+  }
+     {
+name: kenetic-gun
+x: 35
+y: 15
+mirror: true
+layerOffset: 0.1
+shoot: {
+type: ShootAlternate
+shots: 2
+spread: 4
+shotDelay: 2
+}
+top: true
+rotate: true
+rotateSpeed: 3
+reload: 20
+recoil: 1
+shootSound: shootAlt
+ejectEffect: none
+parts: [
+    {
+      type: RegionPart
+      suffix: -barrel-r
+      progress: recoil
+      heatProgress: recoil
+      moveY: -2
+      under: true
+      heatColor: 8DF9D1
+    }
+    {
+      type: RegionPart
+      suffix: -barrel-l
+      mirror: false
+      progress: recoil
+      heatProgress: recoil
+      moveY: -2
+      under: true
+      heatColor: 8DF9D1
+    }
+  ]
+bullet: {
+    type: BasicBulletType,
+    speed: 4
+    lifetime: 90
+    damage: 50
+    width: 10
+    height: 10
+    frontColor: b2afb3
+    backColor: d5d2d6
+    shootEffect: "shootSmall"
+    smokeEffect: "shootSmallSmoke"
+    ammoMultiplier: 5
+    collidesTiles: true
+    hitEffect: pointHit
+    }
+  }
+     {
+    "name": "bolt-large-missile-battery",
+    "reload": 20,
+    "mirror": false,
+    "x": 0,
+    "y": 0,
+    "shootY": 10,
+    "recoil": 0.5,
+    "rotate": true,
+    "rotateSpeed": 0.9,
+    "targetAir": true,
+shoot: {
+  type: ShootAlternate
+  spread: 5
+  shotDelay: 3
+}
+    shootSound: missile
+    bullet: {
+    type: MissileBulletType
+      speed: 5
+      lifetime: 35
+      pierceCap: 10
+        trailEffect: shootSmokeTitan
+        trailColor: 7A8CDC
+        trailChance: -1
+        trailParam: 4
+        trailInterval: 4
+        trailRotation: true
+        trailLength: 8
+        trailWidth: 4
+      damage: 189
+      width: 10
+      height: 10
+        frontColor: ffffff
+        backColor: ffffff
+      collidesGround: true
+      collidesAir: true
+    }
+  }
+     {
+      "name": "zeus-skyrail",
+      "reload": 350,
+      "shake": 7,
+      "mirror": true,
+      "alternate": true
+      "x": 25,
+      "y": -10,
+      "rotate": true,
+      "rotateSpeed": 1,
+      "shootSound": "railgun",
+      "parts": [
+        {
+          "type": "RegionPart",
+          "suffix": "-heat",
+          "layer": 1,
+          "mirror": true,
+          "blending": "additive",
+          "color": "ff2302",
+          "colorTo": "ff2302",
+          "outline": false,
+          "progress": "recoil"
+        }
+      ],
+      "bullet": {
+        "type": "BasicBulletType",
+        "lightColor": "000083b8",
+        "lightOpacity": 0.7,
+        "lightRadius": 40,
+        "despawnEffect": [scatheExplosion, titanSmoke]
+        "trailEffect": {
+         "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "ParticleEffect",
+              "colorFrom": "7A8CDC",
+              "colorTo": "7A8CDC",
+              "length": 10,
+              "baseLength": 20,
+              "sizeInterp": "pow2Out",
+              "interp": "pow2In",
+              "particles": 5,
+              "cone": 10
+            },
+             {
+              "type": "ParticleEffect",
+              "colorFrom": "7A8CDC",
+              "colorTo": "7A8CDC",
+              "length": 20,
+              "baseLength": 10,
+              "sizeInterp": "pow2In",
+              "interp": "pow2Out",
+              "particles": 5,
+              "cone": 10
+            }
+          ]
+        },
+        trailEffect: shootSmokeTitan
+        trailColor: 7A8CDC
+        trailChance: -1
+        trailParam: 4
+        trailInterval: 4
+        trailRotation: true
+        trailLength: 8
+        trailWidth: 4,
+        "speed": 8,
+        "pierce": true,
+        "frontColor": "7A8CDC",
+        "backColor": "7A8CDC",
+        "pierce": true,
+        "pierceCap": 8,
+        "status": "electrified",
+        "statusDuration": 60,
+        "damage": 1800,
+        "width": 5,
+        "height": 5,
+        "lifetime": 200
+       }
+    },
+  ]
+}

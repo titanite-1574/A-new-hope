@@ -1,0 +1,28 @@
+type: Pump
+name: Tita Pump
+health: 265
+size: 2
+pumpAmount: 0.2
+squareSprite: false
+category: liquid
+hasPower: true
+consumes: {
+power: 0.30
+  }
+requirements: [
+  titanium/25
+  graphite/15
+]
+research: {
+  parent: tita-conduit 
+  objectives: [
+    {
+      type: OnSector
+      preset: outscape
+    }
+  ]
+}
+researchCost: [
+    titanium/50
+    graphite/30
+  ]

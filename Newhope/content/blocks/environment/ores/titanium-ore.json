@@ -1,0 +1,7 @@
+type: OreBlock
+name: Titanium Ore
+itemDrop: titanium
+wallOre: true
+variants: 2
+mineAble: true
+tier: 1

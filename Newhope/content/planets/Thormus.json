@@ -1,0 +1,57 @@
+generator: "AsteroidGenerator",
+localizedName: Thormus 
+    parent: "Staria",
+    iconColor: 1a236e,
+    orbitRadius: 5,
+    hasAtmosphere: false,
+    updateLighting: false,
+    drawOrbit: false,
+    accessible: true,
+    alwaysUnlocked: true,
+    defaultCore: "08a-Tiradnium",
+    clearSectorOnLose: true,
+    allowSectorInvasion: false,
+    solarSystem: Staria
+	allowLaunchToNumbered: false,
+    bloom: true
+    radius: 1,
+    hiddenItems: [
+        "copper",
+        "lead",
+        "scrap",
+        "graphite",
+        "coal",
+        "titanium",
+        "thorium",
+        "silicon",
+        "plastanium",
+        "phase-fabric",
+        "surge-alloy",
+        "spore-pod",
+        "sand",
+        "blast-compound",
+        "pyratite",
+        "metaglass",
+        "beryllium",
+        "oxide",
+        "tungsten",
+        "carbide",
+        "fissile-matter",
+        "dormant-cyst"
+    ],
+mesh: {
+  type: NoiseMesh
+  divisions: 3
+  radius: 0.1
+  planet: 1
+  color1: 131316
+  color2: FFAB45
+  octaves: 4
+  persistence: 0.2
+  scale: 1.1
+  mag: 5
+  coct: 4
+  cper: 1.4
+  cscl: 0.3
+  cthresh: 0.01
+  }

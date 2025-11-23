@@ -1,0 +1,158 @@
+{
+  "type": "ItemTurret",
+  "name": Armalx,
+  "researchCostMultiplier": 0.2,
+  "size": 2,
+  "health": 240,
+  "reload": 110,
+  "range": 230,
+  "targetAir": true,
+  "recoil": 0.7,
+  "rotateSpeed": 3,
+  "shootSound": "shootAlt",
+  "drawer": {
+  type: DrawTurret
+  basePrefix: armal-
+  parts: [
+      {
+      type: RegionPart
+      suffix: -heat
+      progress: recoil
+      heatProgress: recoil
+      mirror: false
+      under: false
+      outline: false
+      heatColor: 8DF9D1
+    }
+  ]
+}
+  "ammoTypes": {
+    "titanium": {
+      type: BasicBulletType
+    width: 16
+    height: 16
+    buildingDamageMultiplier: 0.5
+    hitColor: A3BBEB
+    backColor: A3BBEB
+    frontColor: A3BBEB
+    lightColor: A3BBEB
+    damage: 55
+    speed: 6.4
+    lifetime: 32.5
+    despawnEffect: [
+    colorSpark,
+    {
+        type: WaveEffect
+        rotWithParent: true
+        followParent: true
+        lifetime: 12
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: A3BBEB
+        colorTo: A3BBEB
+    }
+    ]
+    pierceCap: 3
+    pierce: true
+    pierceBuilding: true  
+    trailColor: A3BBEB
+    trailInterval: 3
+    trailRotation: true
+    trailLength: 18
+    trailWidth: 2.2
+    trailEffect: colorSpark
+    shootEffect: shootSmokeTitan
+    shrinkX: 0
+    shrinkY: 0
+    },
+    "terala": {
+      type: BasicBulletType
+    width: 16
+    height: 16
+    buildingDamageMultiplier: 0.5
+    hitColor: 5D92BD
+    backColor: 5D92BD
+    frontColor: 5D92BD
+    lightColor: 5D92BD
+    damage: 59.6
+    range: 500
+    speed: 8
+    lifetime: 40
+    despawnEffect: [
+    colorSpark,
+    {
+        type: WaveEffect
+        rotWithParent: true
+        followParent: true
+        lifetime: 12
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: 5D92BD
+        colorTo: FFFFFF
+    }
+    ]
+    pierceCap: 5
+    pierce: true
+    pierceBuilding: true  
+    trailColor: 8AA3F4
+    trailInterval: 3
+    trailRotation: true
+    trailLength: 18
+    trailWidth: 2.2
+    trailEffect: colorSpark
+    shootEffect: shootSmokeTitan
+    shrinkX: 0
+    shrinkY: 0
+    },
+    "termidium-metal": {
+      type: BasicBulletType
+    width: 16
+    height: 16
+    buildingDamageMultiplier: 0.5
+    hitColor: A3BBEB
+    backColor: A3BBEB
+    frontColor: A3BBEB
+    lightColor: A3BBEB
+    damage: 60
+    speed: 6.4
+    lifetime: 32.5
+    despawnEffect: [
+    colorSpark,
+    {
+        type: WaveEffect
+        rotWithParent: true
+        followParent: true
+        lifetime: 12
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: A3BBEB
+        colorTo: A3BBEB
+    }
+    ]
+    pierceCap: 3
+    pierce: true
+    pierceBuilding: true  
+    trailColor: A3BBEB
+    trailInterval: 3
+    trailRotation: true
+    trailLength: 18
+    trailWidth: 2.2
+    trailEffect: colorSpark
+    shootEffect: shootSmokeTitan
+    shrinkX: 0
+    shrinkY: 0
+    }
+  }
+  "requirements": [
+    "graphite/30",
+    "termidium-metal/30",
+    "titanium/40"
+  ],
+  "coolant": {
+    "type": "ConsumeLiquid",
+    "liquid": "water",
+    "amount": 0.4
+  },
+  "category": "turret",
+  "research": "08a-Tiradnium"
+}

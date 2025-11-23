@@ -1,0 +1,5 @@
+type: OreBlock
+name: Terala Ore
+itemDrop: terala
+variants: 2
+mapColor: 84B9E5

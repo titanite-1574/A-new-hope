@@ -1,0 +1,16 @@
+{
+  "name": "Large Plated Titanium Wall"
+  "type": "Wall",
+  "description": A larger version with more armor
+  "buildCostMultiplier": 0.1,
+  "buildTime": 1000
+  "health": 1740,
+  "size": 2,
+  "armor": 5,
+  "requirements": [
+    "titanium/30"
+    "graphite/20"
+  ],
+  "research": 02a-reinforced-titanium-wall 
+  "category": defense
+}

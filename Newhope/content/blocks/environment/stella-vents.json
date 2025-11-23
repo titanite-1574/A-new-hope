@@ -1,0 +1,9 @@
+name: Stella Vent
+type: SteamVent
+blendGroup: stella-stone
+parent: stella-stone
+effect: ventSteam
+effectColor: 867e60
+attributes: {
+   steam: 1
+}

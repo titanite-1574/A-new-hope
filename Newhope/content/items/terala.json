@@ -1,0 +1,6 @@
+name: Terala
+color: 647CC2
+description: A tough ore that can be found all over Stella, used in units, construction and ammunition 
+research: termidium-metal
+healthScaling: 0.9
+hardness: 3

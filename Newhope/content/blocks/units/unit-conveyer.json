@@ -1,0 +1,21 @@
+type: PayloadConveyor
+name: Payload Track
+description: Transport payload and units
+health: 450
+category: units
+research: {
+  parent: tita-duct
+  objectives: [
+    {
+      type: CompleteSector
+      preset: outscape 
+    }
+  ]
+}
+requirements: [
+  titanium/50
+  termidium-metal /30
+]
+canOverdrive: false
+payloadLimit: 4
+researchCostMultiplier: 0.5

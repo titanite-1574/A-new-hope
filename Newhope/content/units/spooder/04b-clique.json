@@ -1,0 +1,98 @@
+"outlineColor": "575666",
+    outlineRadius: 3
+  "type": "legs",
+  "name": Clique 
+  "description": A upgraded version of Faction with stronger weapons 
+	"speed": 0.7,
+	"hitSize": 10,
+	"health": 940,
+ "shownPlanets": [Stella],
+	"faceTarget": true,
+	"armor": 2,
+	"range": 80,
+	"targetAir": true,
+	"rotateSpeed": 3,
+            "legMoveSpace": 1,
+            "legMaxLength": 1.2,
+            "legMinLength": 0.3,
+            "legLengthScl": 0.96,
+            "legForwardScl": 0.5,
+            "legPhysicsLayer": true,
+         "legGroupSize": 2,
+         "legCount": 4,
+         "legExtension": 0,
+        "legContinuousMove": true,
+        "lockLegBase": false,
+        "rippleScale": 0.2,
+	"legBaseOffset": 0,
+	"legLength": 9, 
+	"hovering": false,
+	"immunities": [
+		"freezing"
+	],
+"weapons": [
+		{
+    "name": "clique-weapon",
+    "reload": 40,
+    "mirror": true,
+    "x": 5,
+    "y": 0,
+    "shootY": 2,
+    "shootStatus": slow
+    "recoil": 1,
+    "rotate": true,
+"shoot": {
+"type": "shootPattern",
+ "shots": 2,
+    "shotDelay": 1,
+}
+    shootSound: shootAlt
+    bullet: {
+    type: BacisBulletType
+      speed: 2
+      lifetime: 80
+      damage: 30
+      width: 6
+      height: 6
+        frontColor: 03f8fc
+        backColor: ffffff
+      despawnHit: true
+      despawnEffect: none
+      hitEffect: [
+        {
+          type: ParticleEffect
+          particles: 6
+          line: true
+          lifetime: 25
+          length: 20
+          lenFrom: 5
+          lenTo: 0
+          strokeFrom: 2
+          strokeTo: 0
+          colorFrom: 03f8fc
+          colorTo: ffffff
+        }
+        {
+          type: WaveEffect
+          sizeFrom: 0
+          sizeTo: 15
+          lifetime: 20
+          strokeFrom: 3.5
+          strokeTo: 0
+          colorFrom: 03f8fc
+          colorTo: ffffff
+        }
+      ]
+    }
+    }
+]
+research: {
+    parent: "10f-spider-refabricator",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "sidial"
+        }
+    ]
+}
+researchCostMultiplier: 0

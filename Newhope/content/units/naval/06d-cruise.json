@@ -1,0 +1,59 @@
+type: naval
+name: Cruise
+description: A T4 naval unit with two Tesla coils and a interceptor drone factory
+speed: 0.4
+health: 3405
+armor: 10
+aimDst: 10
+range: 100
+drag: 0.1
+accel: 0.8
+hitSize: 35
+rotateSpeed: 2.5
+trailLength: 15
+outlineColor: 575666
+abilities: [
+  {
+    type: UnitSpawnAbility
+    spawnTime: 1200
+    unit: unite
+    spawnX: 0
+    spawnY: -5
+  }
+]
+weapons: [
+   {
+    name: cruise-tesla
+    mirror: true
+    rotate: true
+    rotateSpeed: 2
+    x: 10
+    y: 0
+    reload: 50
+    recoil: 1.25
+    shootSound: shockBlast
+    "shoot": {
+"type": "shootPattern",
+ "shots": 10,
+    "shotDelay": 0,
+}
+    bullet: {
+      type: LightningBulletType
+      width: 5
+      pierceCap: 2
+      lifetime: 45
+      damage: 50
+      speed: 0
+      smokeEffect: colorSpark
+      trailColor: 7A8CDC
+      trailWidth: 1.5
+      trailLength: 5
+      backColor: 7A8CDC
+    }
+  }
+]
+research: 06b-harpoon
+researchCost: [
+    titanium/500
+    graphite/120
+  ]

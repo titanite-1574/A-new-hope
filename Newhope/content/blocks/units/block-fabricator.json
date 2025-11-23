@@ -1,0 +1,34 @@
+type: Constructor
+name: Block Fabricator 
+description: fabricates block for higher unit tier construction 
+size: 3
+health: 450
+buildTime: 800
+category: units
+requirements: [
+  titanium/50
+  graphite/50
+  termidium-metal/30
+] 
+hasPower: true
+consumes: {
+  power: 1.5
+}
+buildSpeed: 1
+filter: [
+ 02b-large-reinforced-titanium-wall
+ 02d-large-terala-wall
+ 09a-armal
+]
+research: {
+    parent: "unit-conveyer",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "outscape"
+        }
+    ]
+}
+squareSprite: false
+maxBlockSize: 2
+researchCostMultiplier: 0.5

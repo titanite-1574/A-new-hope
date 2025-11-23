@@ -1,0 +1,28 @@
+type: Battery
+name: Stella Battery
+description: stores power. That's it
+size: 2
+health: 250
+squareSprite: false
+consumes: {
+  powerBuffered: 10000
+}
+requirements: [
+  titanium/60
+  graphite/40
+]
+category: power
+research: {
+  parent: 06b-stella-beam-node 
+  objectives: [
+    {
+      type: OnSector
+      preset: outscape
+    }
+  ]
+}
+researchCost: [
+  titanium/200
+  graphite/150
+]
+fogRadius: 1
