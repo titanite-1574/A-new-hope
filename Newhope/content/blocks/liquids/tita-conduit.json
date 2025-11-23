@@ -2,7 +2,7 @@ type: Conduit
 name: Tita Conduit
 description: Transports liquids, What did you expect it to do?
 category: liquid
-research: 01a-Tiradnium 
+research: 08a-Tiradnium 
 requirements: [
   titanium/1
 ]
