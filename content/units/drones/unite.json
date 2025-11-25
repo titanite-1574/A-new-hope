@@ -3,14 +3,13 @@
   name: Unite
   description: A attack drone that circles enemy structure,very fast and have high turning speed
   "controller": "AttackAI",
-  "lifetime": 1500,
   "targetFlags": [turret, core],
   "speed": 3,
   "rotateSpeed": 4
   "accel": 0.1,
   "drag": 0.02,
   "flying": true,
-  "health": 350,
+  "health": 150,
   "hitSize": 13,
   "isEnemy": false,
   "allowedInPayloads": false,

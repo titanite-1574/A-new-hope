@@ -1,82 +1,93 @@
+generator: "PlanetGenerator"
 localizedName: Stellaris
-description:  Stella's moon, with an atmosphere and violent storms, pretty small and close
-alwaysUnlocked: false
-mesh: [
- {
-    //water
+accessible: true
+visible: true
+alwaysUnlocked: true
+hidden: true
+mesh: [{
+    //cryobiome
     type: NoiseMesh
-    planet: trecara
+    planet: Stella
     divisions: 5
-    seed: 7
-    radius: 0.2245
-    color1: 82D0E2
-    color2: 84E8FF
-    octaves: 3.7
-    persistence: 1.1
-  }
-  {
-    //grass
-    type: NoiseMesh
-    planet: trecara
-    divisions: 5
-    radius: 0.222
-    seed: 94
-    color1: 8AA3ED
-    color2: B2C5FF
-    octaves: 3.7
-    persistence: 0.6
-  }
-  {
-    //sand
-    type: NoiseMesh
-    planet: trecara
-    divisions: 6
-    seed: 101
-    radius: 0.22441
-    color1: 276C80
+    seed: 95
+    radius: 0.5
+    color1: 62ABC1
     color2: 488FA6
-    octaves: 5.1
-    persistence: 0.8
-  }
-]
+    octaves: 3
+    persistence: 1.5
+    mag: 1
+    scl: 2
+    }
+    {
+    //stellastonebiome
+    type: NoiseMesh
+    planet: Stella
+    divisions: 5
+    seed: 52
+    radius: 0.5
+    color1: 7899A3
+    color2: 5D7F8A
+    octaves: 3
+    persistence: 1.5
+    }
+  ]
 cloudMesh: [
-  {
+   {
    type: HexSkyMesh
-   planet: trecara
-   speed: 0.891
-   radius: 0.091
+   planet: Stellaris
+   speed: 1.1
+   radius: 0.194
    divisions: 6
-   color: eafffd7e
+   color: e2effc60
    octaves: 3
    persistence: 0.3
-   scl: 0.78
-   thresh: 0.3
-  }
+   scl: 0.9
+   thresh: 0.45
+   }
 ]
-orbitRadius: 5
-sectorSize: 1
+
+allowCampaignRules: true
+allowLaunchLoadout: false
 allowLaunchSchematics: false
 allowLaunchToNumbered: false
-allowLaunchLoadout: false
+allowLegacyLaunchPads: false
 allowSectorInvasion: false
-startSector: 0
-radius: 0.7
-minZoom: 1
-drawOrbit: true
-atmosphereRadIn: 0
-atmosphereRadOut: 0.07
-accessible: false
-updateLighting: true
-sectorSeed: 14513
-bloom: false
-visible: true
-atmosphereColor: 488FA6
-iconColor: 666359
+allowSelfSectorLaunch: false
+allowWaveSimulation: false
+
+iconColor: 98c1f5
+landCloudColor: e2effc60
 hasAtmosphere: true
-allowWaveSimulation: true
-clearSectorOnLose: true
-allowWaves: true
-prebuildBase: false
-defaultCore: 08a-Tiradnium 
+bloom: false
+
+fog: true
+showSpawns: true
+campaignRuleDefaults.fog: true
+campaignRuleDefaults.showSpawns: true
+
+startSector: 0
+sectorSize: 1
 parent: Stella
 solarSystem: Staria
+tidalLock: true
+orbitRadius: 4.5
+orbitOffset: 2
+orbitTime: 100
+orbitSpacing: 0.8
+radius: 0.6
+totalradius: 2.2
+minZoom: 0.8
+
+prebuildBase: true
+clearSectorOnLose: true
+coreDestroyClear: true
+onlyDepositCore: true
+defaultCore: 08a-Tiradnium 
+enemyBuildSpeedMultiplier: 0.2
+enemyCoreSpawnReplace: false
+updateLighting: false
+
+launchCandidates: []
+itemWhitelist: [
+  "titanium"
+]

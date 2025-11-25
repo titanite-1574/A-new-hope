@@ -1,14 +1,14 @@
 type: naval
 name: Ballistic 
 description: A T5 naval unit with a large Tesla coil,a interceptor drone and a defender drone factory. Fires a barrage of missiles at rnemies
-speed: 0.3
-health: 7405
+speed: 0.2
+health: 10385
 armor: 20
 aimDst: 10
 range: 100
 drag: 0.1
 accel: 0.8
-hitSize: 35
+hitSize: 43
 rotateSpeed: 2.5
 trailLength: 15
 outlineColor: 575666
@@ -17,67 +17,32 @@ abilities: [
     type: UnitSpawnAbility
     spawnTime: 1250
     unit: unite
-    spawnX: -10
-    spawnY: -4
+    spawnX: 0
+    spawnY: 30
   }
   {
     type: UnitSpawnAbility
     spawnTime: 1250
     unit: unite
-    spawnX: 10
-    spawnY: -4
+    spawnX: 0
+    spawnY: 20
   }
   {
     type: UnitSpawnAbility
     spawnTime: 1270
-    unit: bond
-    spawnX: 10
-    spawnY: 4
+    unit: continental 
+    spawnX: 0
+    spawnY: 10
   }
   {
     type: UnitSpawnAbility
     spawnTime: 1270
-    unit: bond
-    spawnX: -10
-    spawnY: 4
+    unit: continental 
+    spawnX: 0
+    spawnY: -30
   }
 ]
 weapons: [
-   {
-    name: ballistic-heavy-tesla
-    mirror: false
-    rotate: true
-    rotateSpeed: 0.5
-    recoilTime: 500
-    top: true
-    x: 0
-    y: 1
-    reload: 500
-    recoil: 1.25
-    shootSound: shockBlast
-    shake: 15
-    shootY: 23
-    "cooldownTime": 200,
-    "chargeSound": "laserCharge",
-    "shoot": {
-"type": "shootPattern",
- "shots": 25,
-    "shotDelay": 0,
-}
-    bullet: {
-      type: LightningBulletType
-      width: 5
-      pierceCap: 2
-      lifetime: 45
-      damage: 35
-      speed: 0
-      smokeEffect: colorSpark
-      trailColor: 7A8CDC
-      trailWidth: 1.5
-      trailLength: 5
-      backColor: 7A8CDC
-    }
-  }
   {
     name: ballistic-heavy-missile
     mirror: true

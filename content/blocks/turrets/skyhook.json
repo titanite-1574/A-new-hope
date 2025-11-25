@@ -29,6 +29,11 @@ ammoTypes: {
     displayAmmoMultiplier: false
     spawnUnit: skyhook-missile-1
   }
+  termidium-metal: {
+    ammoMultiplier: 1
+    displayAmmoMultiplier: false
+    spawnUnit: skyhook-missile-2
+  }
 }
 drawer:{
  type: DrawTurret

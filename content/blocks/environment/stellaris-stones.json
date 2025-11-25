@@ -1,0 +1,6 @@
+{
+  "name": Stellaris Stone
+  "type": "Floor",
+  "variants": 2,
+  "wall": "stellaris-stone-walls"
+}

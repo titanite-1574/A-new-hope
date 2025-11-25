@@ -9,7 +9,7 @@
   "accel": 0.1,
   "drag": 0.02,
   "flying": true,
-  "health": 350,
+  "health": 100,
   "hitSize": 13,
   "isEnemy": false,
   "allowedInPayloads": false,
@@ -21,7 +21,7 @@
   "armor": 5,
   "itemCapacity": 0,
   "engineOffset": 2,
-  "range": 500,
+  "range": 50,
   "engineColor": "69C47B",
   "trailColor": "69C47B",
   "trailLength": 8,
@@ -64,7 +64,7 @@
           "colorTo": "69C47B"
         },
         "speed": 100,
-        "maxRange": 300
+        "maxRange": 50
       }
     }
   ]

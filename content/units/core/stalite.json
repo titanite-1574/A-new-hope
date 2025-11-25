@@ -1,5 +1,5 @@
-name: Titanite 
-description: Defender of the Osris core. Ingored by multiple enemies and turrets
+name: Stalite
+description: Defeder of the Astrea core. Capable of surviving the condition of Stellaris and the infection 
 controller: BuilderAI
 armor: 2
 health: 340

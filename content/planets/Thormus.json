@@ -1,7 +1,7 @@
 generator: "AsteroidGenerator",
 localizedName: Thormus 
     parent: "Staria",
-    iconColor: 1a236e,
+    iconColor: FFA665,
     orbitRadius: 5,
     hasAtmosphere: false,
     updateLighting: false,
