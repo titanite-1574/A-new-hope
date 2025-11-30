@@ -1,6 +1,9 @@
 name: Titanite 
 description: Defender of the Osris core. Ingored by multiple enemies and turrets
 controller: BuilderAI
+coreFleeRange: 500
+commands: [rebuild]
+coreUnitDock: true
 armor: 2
 health: 340
 speed: 3

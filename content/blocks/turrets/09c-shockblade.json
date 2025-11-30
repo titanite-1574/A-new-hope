@@ -1,7 +1,7 @@
 {
   "type": "ItemTurret",
   "name": Shockblade,
-  "description": Shoots bullets at a high pace
+  "description": Shoots volley of artillery rounds at enemy target
   "researchCostMultiplier": 0.2,
   "size": 3,
   "health": 700,
@@ -61,8 +61,8 @@ moveWhileCharging: false
   ]
 }
   "ammoTypes": {
-    "terala": {
-      type: BasicBulletType
+    "titanium": {
+      type: ArtilleryBulletType
     width: 16
     height: 16
     buildingDamageMultiplier: 0.5
@@ -70,17 +70,51 @@ moveWhileCharging: false
     backColor: A3BBEB
     frontColor: A3BBEB
     lightColor: A3BBEB
+    splashDamageRadius: 20
+      splashDamage: 50
     damage: 50
     speed: 10
     lifetime: 40
-    shoot: {
-      "type": "shootHelix",
-         mag: 1
-      offset: 0
-         scl: 3
-     "shots": 3,
-     "shotDelay": 10,
-},
+    despawnEffect: [
+    colorSpark,
+    {
+        type: WaveEffect
+        rotWithParent: true
+        followParent: true
+        lifetime: 12
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: A3BBEB
+        colorTo: A3BBEB
+    }
+    ]
+    pierceCap: 3
+    pierce: true
+    pierceBuilding: true  
+    trailColor: A3BBEB
+    trailInterval: 3
+    trailRotation: true
+    trailLength: 18
+    trailWidth: 2.2
+    trailEffect: colorSpark
+    shootEffect: shootSmokeTitan
+    shrinkX: 0
+    shrinkY: 0
+    },
+    "terala": {
+      type: ArtilleryBulletType
+    width: 16
+    height: 16
+    buildingDamageMultiplier: 0.5
+    hitColor: A3BBEB
+    backColor: A3BBEB
+    frontColor: A3BBEB
+    lightColor: A3BBEB
+    splashDamageRadius: 25
+      splashDamage: 75
+    damage: 75
+    speed: 13
+    lifetime: 50
     despawnEffect: [
     colorSpark,
     {
@@ -108,7 +142,7 @@ moveWhileCharging: false
     shrinkY: 0
     },
     "termidium-metal": {
-      type: BasicBulletType
+      type: ArtilleryBulletType
     width: 16
     height: 16
     buildingDamageMultiplier: 0.5
@@ -116,6 +150,8 @@ moveWhileCharging: false
     backColor: A3BBEB
     frontColor: A3BBEB
     lightColor: A3BBEB
+    splashDamageRadius: 30
+      splashDamage: 40
     damage: 40
     speed: 6.4
     lifetime: 32.5

@@ -1,16 +1,16 @@
 type: missile
 controller: MissileAI
 flying: true
-speed: 4.6
+speed: 6
 maxRange: 9
-lifetime: 576
+lifetime: 590
 hidden: true
 envEnabled: 17
 envDisabled: 0
 outlineColor: 2d2f39
 autoFindTarget: true
-engineColor: ACB9ED
-trailColor: ACB9ED
+engineColor: 6158BB
+trailColor: 6158BB
 engineSize: 3.5
 engineOffset: 10
 rotateSpeed: 0.1
@@ -32,13 +32,13 @@ abilities: [
               effect: [
               {
               type: ParticleEffect
-              particles: 8
+              particles: 13
               lifetime: 30
-              length: 12
+              length: 20
               sizeFrom: 4
               sizeTo: 1
-              colorFrom: 7A8CDC
-              colorTo: ACB9ED
+              colorFrom: 6158BB
+              colorTo: 6158BB
               strokeFrom: 3
               strokeTo: 1.5
               interp: pow3Out
@@ -63,22 +63,20 @@ weapons: [
           
           bullet:{
         type: BombBulletType
-        splashDamageRadius: 65
-        splashDamage: 250
-              status: freezing 
+        splashDamageRadius: 100
+        splashDamage: 500
       statusDuration: 80
         instantDisappear: true
         killShooter: true
         hittable: false
         collidesAir: true
-      "lightning": 8,
+      "lightning": 15,
       "lightningLength": 7,
       "lightningLengthRand": 12,
       "lightningDamage": 50,
-                    status: freezing 
       statusDuration: 60
-      "lightColor": "7A8CDC",
-      "lightningColor": "ACB9ED",
+      "lightColor": "6158BB",
+      "lightningColor": "6158BB",
    "hitEffect": {
     "type": "multiEffect",
     "effects": [
@@ -104,9 +102,9 @@ weapons: [
     "lenTo": 3,
     strokeFrom: 5
     strokeTo: 0
-    "lightColor": "7A8CDC",
-    "colorFrom": "7A8CDC",
-    "colorTo": "ACB9ED"
+    "lightColor": "6158BB",
+    "colorFrom": "6158BB",
+    "colorTo": "6158BB"
 	},
   	{
 	"type": "ParticleEffect",
@@ -115,8 +113,8 @@ weapons: [
     "lifetime": 80,
     "interp": "circleOut",
     "sizeInterp": "pow5In",
-    "colorFrom": "7A8CDC",
-    "colorTo": "ACB9ED",
+    "colorFrom": "6158BB",
+    "colorTo": "6158BB",
     "sizeFrom": 8,
     "sizeTo": 0
 	},

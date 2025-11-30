@@ -64,7 +64,7 @@ weapons: [
           bullet:{
         type: BombBulletType
         splashDamageRadius: 65
-        splashDamage: 450
+        splashDamage: 300
               status: freezing 
       statusDuration: 150
         instantDisappear: true

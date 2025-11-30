@@ -2,7 +2,7 @@
     outlineRadius: 3
   "type": "legs",
   "name": Clique 
-  "description": A upgraded version of Faction with stronger weapons 
+  "description": A upgraded version of Faction with stronger weapons. Slows down when shooting
 	"speed": 0.7,
 	"hitSize": 10,
 	"health": 940,
@@ -15,17 +15,17 @@
             "legMoveSpace": 1,
             "legMaxLength": 1.2,
             "legMinLength": 0.3,
-            "legLengthScl": 0.96,
-            "legForwardScl": 0.5,
+            "legLengthScl": 0.99,
+            "legForwardScl": 0.7,
             "legPhysicsLayer": true,
          "legGroupSize": 2,
          "legCount": 4,
          "legExtension": 0,
         "legContinuousMove": true,
         "lockLegBase": false,
-        "rippleScale": 0.2,
+        "rippleScale": 0.3,
 	"legBaseOffset": 0,
-	"legLength": 9, 
+	"legLength": 13, 
 	"hovering": false,
 	"immunities": [
 		"freezing"
@@ -44,20 +44,39 @@
 "shoot": {
 "type": "shootPattern",
  "shots": 2,
-    "shotDelay": 1,
+    "shotDelay": 0,
 }
     shootSound: shootAlt
     bullet: {
-    type: BacisBulletType
-      speed: 2
-      lifetime: 80
-      damage: 30
+      type: BasicBulletType
       width: 6
-      height: 6
-        frontColor: 03f8fc
-        backColor: ffffff
-      despawnHit: true
-      despawnEffect: none
+      height: 10
+      weaveMag: 4
+      weaveScale: 4
+      lifetime: 45
+      speed: 3
+      damage: 30
+      frontColor: 95CDF1
+        backColor: 95CDF1
+      trailWidth: 1.5
+      trailColor: 95CDF1
+      trailLength: 6
+      trailChance: -1
+      ShootEffect: [
+        {
+          type: ParticleEffect
+          particles: 6
+          line: true
+          lifetime: 25
+          length: 20
+          lenFrom: 5
+          lenTo: 0
+          strokeFrom: 2
+          strokeTo: 0
+          colorFrom: 95CDF1
+          colorTo: 95CDF1
+        }
+      ]
       hitEffect: [
         {
           type: ParticleEffect
@@ -69,8 +88,8 @@
           lenTo: 0
           strokeFrom: 2
           strokeTo: 0
-          colorFrom: 03f8fc
-          colorTo: ffffff
+          colorFrom: 95CDF1
+          colorTo: 95CDF1
         }
         {
           type: WaveEffect
@@ -79,8 +98,33 @@
           lifetime: 20
           strokeFrom: 3.5
           strokeTo: 0
-          colorFrom: 03f8fc
-          colorTo: ffffff
+          colorFrom: 95CDF1
+          colorTo: 95CDF1
+        }
+      ]
+      despawnEffect: [
+        {
+          type: ParticleEffect
+          particles: 6
+          line: true
+          lifetime: 25
+          length: 20
+          lenFrom: 5
+          lenTo: 0
+          strokeFrom: 2
+          strokeTo: 0
+          colorFrom: 95CDF1
+          colorTo: 95CDF1
+        }
+        {
+          type: WaveEffect
+          sizeFrom: 0
+          sizeTo: 15
+          lifetime: 20
+          strokeFrom: 3.5
+          strokeTo: 0
+          colorFrom: 95CDF1
+          colorTo: 95CDF1
         }
       ]
     }

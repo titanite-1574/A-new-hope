@@ -1,7 +1,7 @@
 type: ItemTurret
 name: Skyhook
 size: 5
-reload: 220
+reload: 750
 health: 6850
 range: 2000
 category: turret
@@ -13,13 +13,13 @@ basePrefix: -base
     "shootWarmupSpeed": 0.01,
     "minWarmup": 0.9,
 consumes: {
-    power: 4
+    power: 3.5
 }
 shoot: {
   type: ShootBarrel
   shots: 1
   barrels: [
-    0, -8, 0
+    0, 0, 0
   ]
 }
 ammoPerShot: 5
@@ -34,10 +34,22 @@ ammoTypes: {
     displayAmmoMultiplier: false
     spawnUnit: skyhook-missile-2
   }
+  arnium: {
+    ammoMultiplier: 1
+    displayAmmoMultiplier: false
+    spawnUnit: neptunium-missile
+  }
 }
 drawer:{
  type: DrawTurret
  parts: [
+{
+      type: RegionPart
+      suffix: -body
+      progress: warmup
+      moveY: 0
+      under: true
+    }
 {
     type: RegionPart
     suffix: -missile
@@ -48,12 +60,12 @@ drawer:{
     under: true
     mirror: false
     layerOffset: 0.01
-    y: 6
+    y: 0
 }
          {
          "type": "RegionPart",
-          "suffix": "-part1",
-         "mirror": true,
+          "suffix": "-partl",
+         "mirror": false,
          outline: false
         "progress": {
           "type": "warmup",
@@ -63,44 +75,23 @@ drawer:{
           }
           "outlineLayerOffset": 0.001,
          "moveX": -5,
-             layerOffset: 0.02
+             layerOffset: 1
          }
-          {
-      type: ShapePart
-      y: -13.5
-      radius: 6.5
-      stroke: 0
-      strokeTo: 1
-      layer: 110
-      circle: true
-      hollow: true
-      color: 8AA3F4
-    }
-    {
-      type: ShapePart
-      y: -13.5
-      radius: 10
-      stroke: 0
-      strokeTo: 1.5
-      layer: 110
-      circle: true
-      hollow: true
-      color: C9D6FF
-    }
-    {
-      type: HaloPart
-      layer: 110
-      color: FFD8BE
-      y: -13.5
-      haloRotateSpeed: 0.55
-      sides: 4
-      haloRadius: 0.5
-      radius: 4.5
-      hollow: false
-      tri: true
-      triLength: 0
-      triLengthTo: 9
-    }
+         {
+         "type": "RegionPart",
+          "suffix": "-partr",
+         "mirror":false,
+         outline: false
+        "progress": {
+          "type": "warmup",
+          "op": "blend",
+          "other": "heat",
+          "amount": 0.5
+          }
+          "outlineLayerOffset": 0.001,
+         "moveX": 5,
+             layerOffset: 1
+         }
   ]
 }
     "shootEffect": {

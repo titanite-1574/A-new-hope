@@ -1,8 +1,8 @@
 "outlineColor": "575666",
     outlineRadius: 3
   "type": "legs",
-  "name": Sorority 
-  "description": ...
+  "name": Coalition 
+  "description": A bwig spider with a missile battery and a artillery 
 	"speed": 0.4,
 	"hitSize": 40,
 	"health": 5500,
@@ -10,6 +10,18 @@
 	"armor": 10,
 	"range": 50,
 	"targetAir": true,
+ "abilities": [
+    {
+    type: ShieldArcAbility
+    radius: 50
+    angle: 180
+    width: 4
+    y: 2
+    cooldown: 200
+    regen: 1
+    max: 200
+   },
+ ]
 	"rotateSpeed": 1,
           "legMoveSpace": 1,
             "legMaxLength": 1.2,
@@ -18,7 +30,7 @@
             "legForwardScl": 0.5,
             "legPhysicsLayer": false,
          "legGroupSize": 5,
-         "legCount": 6,
+         "legCount": 4,
          "legExtension": 0,
         "legContinuousMove": true,
         "lockLegBase": false,
@@ -42,22 +54,24 @@
     "rotate": true,
 "shoot": {
 "type": "shootPattern",
- "shots": 5,
-    "shotDelay": 1,
+ "shots": 2,
+    "shotDelay": 5,
 }
-    shootSound: missile
+    shootSound: shootAlt
     bullet: {
-    type: MissileBulletType
+    type: BasicBulletType
       speed: 5
       lifetime: 40
       damage: 20
+      weaveMag: 4
+      weaveScale: 4
       width: 6
       height: 6
-        frontColor: 03f8fc
-        backColor: ffffff
+        frontColor: 95CDF1
+        backColor: 95CDF1
       despawnHit: true
       despawnEffect: none
-      trailColor: E3EBFB
+      trailColor: 95CDF1
       trailWidth: 1.5
       trailLength: 5
       hitEffect: [
@@ -71,7 +85,7 @@
           lenTo: 0
           strokeFrom: 2
           strokeTo: 0
-          colorFrom: 03f8fc
+          colorFrom: 95CDF1
           colorTo: ffffff
         }
         {
@@ -81,7 +95,7 @@
           lifetime: 20
           strokeFrom: 3.5
           strokeTo: 0
-          colorFrom: 03f8fc
+          colorFrom: 95CDF1
           colorTo: ffffff
         }
       ]
@@ -100,7 +114,7 @@
     "targetAir": false,
 "shoot": {
 "type": "shootPattern",
- "shots": 1,
+ "shots": 2,
     "shotDelay": 3,
 }
     shootSound: largeCannon
@@ -114,7 +128,7 @@
       lifetime: 150
       pierceCap: 10
         trailEffect: shootSmokeTitan
-        trailColor: 7A8CDC
+        trailColor: 95CDF1
         trailChance: -1
         trailParam: 4
         trailInterval: 4
@@ -124,8 +138,8 @@
       damage: 200
       width: 10
       height: 10
-        frontColor: 03f8fc
-        backColor: ffffff
+        frontColor: 95CDF1
+        backColor: 95CDF1
       despawnSound: titanExplosion
       despawnHit: true
       despawnEffect: true
