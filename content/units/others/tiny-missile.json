@@ -23,6 +23,21 @@ outlineRadius: 2
 outlineColor: 44413c
 range: 25
 hidden: true
+"parts": [
+    {
+      "type": "FlarePart",
+      "progress": {
+        "type": "life",
+        "op": "curve",
+        "interp": "pow3Out"
+      },
+      "rotation": 86,
+      "color1": "A9D8FFFF",
+      "stroke": 4.5,
+      "radius": 0,
+      "radiusTo": 30
+    }
+  ],
 weapons: [
   {
     reload: 1

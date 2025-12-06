@@ -37,8 +37,9 @@
   "category": "units",
   "research": "10d-war-refabricator"
   "requirements": [
-    "graphite/3000",
+    "graphite/300",
     "titanium/500",
     "termidium-metal/450"
+    "limite/200"
   ]
 }

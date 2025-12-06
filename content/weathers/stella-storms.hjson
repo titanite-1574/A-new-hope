@@ -1,6 +1,6 @@
 type: ParticleWeather
-color: 8AA3F4
-noiseColor: 8AA3F4
+color: 758A99
+noiseColor: 758A99
 particleRegion: particle
 sizeMax: 15
 sizeMin: 1

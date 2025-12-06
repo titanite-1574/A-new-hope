@@ -1,6 +1,6 @@
 generator: "PlanetGenerator"
 localizedName: Stella
-description: A large frozen planet with multiple treats
+description: A large tundra planet with multiple treats
 accessible: true
 visible: true
 alwaysUnlocked: true
@@ -26,8 +26,8 @@ mesh: [
     divisions: 5
     seed: 52
     radius: 1.100
-    color1: 7899A3
-    color2: 5D7F8A
+    color1: 4C515D
+    color2: 4C515D
     octaves: 3
     persistence: 1.1
     }

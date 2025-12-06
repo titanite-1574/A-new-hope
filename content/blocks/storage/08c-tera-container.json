@@ -1,0 +1,25 @@
+type: StorageBlock
+name: Tera Container
+description: Store items in a safe place
+size: 2
+health: 450
+itemCapacity: 150
+category: effect
+research: {
+  parent: 04a-tita-duct
+  objectives: [
+    {
+      type: OnSector
+      preset: outscape
+    }
+  ]
+}
+requirements: [
+  titanium/30
+  terala/70
+]
+squareSprite: false
+researchCost: [
+  titanium/80
+  terala/130
+]

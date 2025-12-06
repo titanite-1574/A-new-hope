@@ -1,5 +1,5 @@
-size: 4
-description: A powerful railgun that can reach a large distance
+size: 5
+description: A railgun capable of dealing large damage to enemies while dealing AOE damage.
 name: Holostar
 type: ItemTurret
 rotateSpeed: 1
@@ -16,15 +16,25 @@ smokeEffect: none
 ammoUseEffect: none
 ammoPerShot: 4
 maxAmmo: 60
+minWarmup: 0.4
+moveWhileCharging: false
+shoot: {
+  firstShotDelay: 115
+  shots: 1
+  shotDelay: 0
+}
 ammoTypes: {
     termidium-metal: {
-        type: BasicBulletType
+        type: ArtilleryBulletType
         width: 18
         height: 18
         sprite: a-new-hope-holostar-star 
         speed: 30
         lifetime: 37
-        damage: 500
+        damage: 1000
+        splashDamageRadius: 100
+      splashDamage: 1050
+        despawnSound: holostarImpact
         backColor: ffffff
         frontColor: ffffff
         hitColor: ffffff
@@ -33,32 +43,55 @@ ammoTypes: {
         trailLength: 40
         trailChance: 100
         hitEffect: {
-            type: WaveEffect
-            sides: 0
-            lifetime: 10
-            sizeFrom: 0
-            sizeTo: 50
-            strokeFrom: 7
-            strokeTo: 0
-        }
+        "type": "MultiEffect",
+        "effects": [
+            {
+                "type": "WaveEffect",
+                "colorFrom": "FFFFFF",
+                "colorTo": "000000",
+                "sizeFrom": 1,
+                "sizeTo": 1000,
+                "lifetime": 300
+            }
+             {
+              type: ParticleEffect
+              particles: 12
+              lifetime: 60
+              length: 20
+              sizeFrom: 5
+              sizeTo: 1
+              colorFrom: 9daeff00
+              colorTo: 9daeff
+              strokeFrom: 3
+              strokeTo: 1.5
+              interp: pow3Out
+              spin: 5
+              sizeInterp: pow2In
+              region: a-new-hope-holostar-bullet 
+            }
+        ]
+    },
         despawnEffect: {
-            type: WaveEffect
-            sides: 0
-            lifetime: 20
-            sizeFrom: 0
-            sizeTo: 30
-            strokeFrom: 7
-            strokeTo: 0
-        }
-        shootEffect: {
-            type: WaveEffect
-            sides: 0
-            lifetime: 10
-            sizeFrom: 0
-            sizeTo: 50
-            strokeFrom: 7
-            strokeTo: 0
-        }
+        "type": "MultiEffect",
+        "effects": [
+             {
+              type: ParticleEffect
+              particles: 12
+              lifetime: 60
+              length: 20
+              sizeFrom: 5
+              sizeTo: 1
+              colorFrom: FFFFFF
+              colorTo: FFFFFF
+              strokeFrom: 3
+              strokeTo: 1.5
+              interp: pow3Out
+              spin: 5
+              sizeInterp: pow2In
+              region: a-new-hope-holostar-bullet 
+            }
+        ]
+    },
         shrinkX: 0
         shrinkY: 0
         trailEffect: [
@@ -86,29 +119,35 @@ drawer: {
     basePrefix: "holostar-"
     parts: [
         {
-            type: RegionPart
-            suffix: -bladea
-            mirror: true
-            moveX: 2
-            moveY: 0
-            moveRot: -10
-            heatLayerOffset: -0.001
-            under: true
-            heatColor: 87ceeb
-            progress: warmup
-        }
-        {
-            type: RegionPart
-            suffix: -bladeb
-            mirror: true
-            moveX: 2
-            moveY: 0
-            moveRot: -10
-            heatLayerOffset: -0.001
-            under: true
-            heatColor: 87ceeb
-            progress: warmup
-        }
+         "type": "RegionPart",
+          "suffix": "-armL",
+         "mirror": false,
+         outline: false
+        "progress": {
+          "type": "warmup",
+          "op": "blend",
+          "other": "heat",
+          "amount": 0.5
+          }
+          "outlineLayerOffset": 0.001,
+         "moveX": -2,
+             layerOffset: 1
+         }
+         {
+         "type": "RegionPart",
+          "suffix": "-armR",
+         "mirror":false,
+         outline: false
+        "progress": {
+          "type": "warmup",
+          "op": "blend",
+          "other": "heat",
+          "amount": 0.5
+          }
+          "outlineLayerOffset": 0.001,
+         "moveX": 2,
+             layerOffset: 1
+         }
         {
       type: ShapePart
       y: -13.5
@@ -129,12 +168,12 @@ drawer: {
       layer: 110
       circle: true
       hollow: true
-      color: 7A8CDC
+      color: FFFFFF
     }
     {
       type: HaloPart
       layer: 110
-      color: 7A8CDC
+      color: FFFFFF 
       y: -13.5
       haloRotateSpeed: 1
       sides: 3
@@ -148,7 +187,7 @@ drawer: {
      {
      type: HaloPart
      layer: 110
-     color: 7A8CDC
+     color: FFFFFF 
      y: -13.5
      haloRotateSpeed: 1.5
      sides: 3

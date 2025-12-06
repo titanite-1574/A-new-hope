@@ -2,6 +2,7 @@ type: ConsumeGenerator
 size: 3
 name: Cryofluid Diffuser
 description: Diffuse titanium with cryofluid to generate a lot of power
+squareSprite: false
 hasLiquids: true
 liquidCapacity: 60
 canOverdrive: false
@@ -14,18 +15,17 @@ baseExplosiveness: 0
        "type": "DrawRegion",
        "suffix": "-bottom"
 	   },
+    {
+      type: DrawLiquidTile
+      drawLiquid: cryofluid 
+      padding: 1.5
+    }
         {
-        "type": "DrawLiquidTile",
-        "drawLiquid": "cryofluid",
-        "suffix": "-liquid"
-        },
-        {	
-        "type": "DrawPistons"
-        suffix: -piston1
-        sinMag: 5
-        sinScl: 10
-        sides: 4
-	      }
+      type: DrawRegion
+      suffix: -rotator
+      spinSprite: true
+      rotateSpeed: 10
+    }
         {	
         "type": "DrawDefault"
 	       }

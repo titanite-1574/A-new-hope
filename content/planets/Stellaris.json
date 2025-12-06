@@ -82,7 +82,7 @@ prebuildBase: true
 clearSectorOnLose: true
 coreDestroyClear: true
 onlyDepositCore: true
-defaultCore: 08a-Tiradnium 
+defaultCore: 08a-astrea
 enemyBuildSpeedMultiplier: 0.2
 enemyCoreSpawnReplace: false
 updateLighting: false

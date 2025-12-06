@@ -83,7 +83,7 @@
     type: ExplosiveBulletType
     sprite: large-bomb
     spin: 3
-    splashDamage: 50
+    splashDamage: 300
         splashDamageRadius: 100
       speed: 5
       lifetime: 70

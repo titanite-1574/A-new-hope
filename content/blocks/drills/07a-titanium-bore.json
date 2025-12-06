@@ -10,6 +10,7 @@ drillTime: 180
 ambientSound: drill
 ambientSoundVolume: 0.08
 hasLiquids: true
+sparkColor: 7A8CDC
 consumes: {
   power: 0.25
   liquids: {

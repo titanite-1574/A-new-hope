@@ -1,0 +1,55 @@
+type: AttributeCrafter
+description: Use to extract Klorigen gas from vents using strong suction 
+name: Vent Extractor 
+attribute: steam
+size: 3
+hasLiquids: true
+squareSprite: false
+outputLiquid: klorigen/1
+displayEfficiencyScale: 1
+baseEfficiency: 0
+squareSprite: false
+minEfficiency: 9
+category: production
+consumes: {
+  power: 0.25
+}
+liquidCapacity: 180
+research: 07a-titanium-bore
+requirements: [
+  titanium/200
+  terala/150
+  termidium-metal/150
+  graphite/100
+]
+researchCost: [
+  titanium/550
+  terala/500
+  termidium-metal/350
+  graphite/400
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+        "type": "DrawLiquidRegion"
+        suffix: -liquid
+        drawLiquid: klorigen
+        }
+    {
+      type: DrawRegion
+      suffix: -rotator
+      spinSprite: true
+      rotateSpeed: 10
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+buildCostMultiplier: 2
+group: liquids
