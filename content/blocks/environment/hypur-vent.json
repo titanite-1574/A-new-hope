@@ -1,9 +1,0 @@
-name: Hypur Vent
-type: SteamVent
-blendGroup: hypur-stone
-parent: hypur-stone
-effect: ventSteam
-effectColor: 867e60
-attributes: {
-   steam: 1
-}
