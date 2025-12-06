@@ -1,6 +1,6 @@
 {
   name: War
-  description : A fast flying unit with a singular gun
+  description : A fast flying unit with a singular gun. Strong in groups,weak alone
     research: {
   parent: 10c-war-fabricator 
   shownPlanets: [Stella]
@@ -31,12 +31,12 @@ researchCost: [
   "armor": 1,
   "itemCapacity": 0,
   "outlineColor": "575666",
-  "engineOffset": 6,
-  "engineColor": "7A8CDC",
+  "engineOffset": 4,
+  "engineColor": "4477BA",
   "faceTarget": true,
   "weapons": [
     {
-      "name": "war-weapon",
+      "name": "weapon",
       "shootCone": 15,
       "mirror": false,
       "alternate": false,
@@ -45,8 +45,8 @@ researchCost: [
       "x": 0,
       "y": 0,
       "shootY": 3,
-      "reload": 15,
-      "shootSound": "blaster",
+      "reload": 15, 
+      "shootSound": "gun",
       "bullet": {
         "type": "basicBulletType",
         "despawnEffect": {
@@ -59,9 +59,8 @@ researchCost: [
           "cone": -360,
           "lenFrom": 5,
           "lenTo": 0,
-          "colorFrom": "7A8CDC",
+          "colorFrom": "4477BA",
           "colorTo": "FFFFFF",
-          "recoil": 0.5
         },
         "hitEffect": {
           "type": "ParticleEffect",
@@ -73,14 +72,18 @@ researchCost: [
           "cone": -360,
           "lenFrom": 5,
           "lenTo": 0,
-          "colorFrom": "7A8CDC",
+          "colorFrom": "4477BA",
           "colorTo": "FFFFFF"
         },
         "damage": 10,
-        "height": 5,
+        "height": 2,
         "width": 5,
+        "sprite": missile-large
         "speed": 4,
-        "frontColor": "7A8CDC",
+        "trailWidth": 2
+        "trailLength": 3
+        "trailColor": FFFFFF
+        "frontColor": "FFFFFF",
         "backColor": "FFFFFF",
         "lifetime": 50
       }

@@ -2,7 +2,7 @@
     outlineRadius: 3
   "type": "legs",
   "name": Coterie
-  "description": A upgraded version of Clique with stronger weapons
+  "description": Equipped with two double barrel gun and a single large artillery 
 	"speed": 0.5,
 	"hitSize": 15,
 	"health": 2500,
@@ -66,6 +66,7 @@
 "type": "shootAlternate",
 "spread": 2
  "shots": 2,
+ "barrel": 2,
     "shotDelay": 3,
 }
     shootSound: shootAlt
@@ -121,7 +122,7 @@
 "shoot": {
 "type": "shootPattern",
  "shots": 3,
-    "shotDelay": 3,
+    "shotDelay": 10,
 }
     shootSound: artillery 
     bullet: {
@@ -129,15 +130,15 @@
       sprite: large-bomb
       width: 5
       splashDamageRadius: 40
-      splashDamage: 50
+      splashDamage: 100
       pierceCap: 5
       lifetime: 100
       damage: 50
       speed: 2
-      smokeEffect: colorSpark
       trailColor: E3EBFB
       trailWidth: 1.5
       trailLength: 5
+      "ejectEffect": "casing2",
       backColor: E3EBFB
       hitColor: E3EBFB
       despawnEffect: {
@@ -183,7 +184,7 @@ research: {
     objectives: [
         {
             type: "OnSector",
-            preset: "outscape"
+            preset: "sidial"
         }
     ]
 }

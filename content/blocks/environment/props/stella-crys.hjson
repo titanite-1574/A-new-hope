@@ -1,0 +1,7 @@
+type: TallBlock
+name: Stella Blu Crystal
+variants: 2
+clipSize: 96
+emitLight: true
+lightColor: 687CA3
+customShadow: true

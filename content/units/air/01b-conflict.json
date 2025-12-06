@@ -1,6 +1,6 @@
 {
   name: Conflict
-  description : A tier 2 unit with two guns on each side.
+  description : A tier 2 unit that shoots out electric arrows at enemies 
   shownPlanets: [Stella]
     research: {
     parent: "10d-war-refabricator",
@@ -22,7 +22,7 @@
   "armor": 3,
   "itemCapacity": 0,
   "outlineColor": "595959",
-  "engineOffset": 10,
+  "engineOffset": 9,
   "engineColor": "7A8CDC",
   "engineSize": 3,
   "waveTrailY": -3.0
@@ -54,27 +54,45 @@
       "layerOffset": 0,
       "rotate": false,
       "rotateSpeed": 3,
-      "x": 6,
-      "y": 1,
+      "x": 0,
+      "y": 0,
       "shootY": 2,
       "reload": 70,
       "recoil": 2
-      "shootSound": "cannon",
+      "shootSound": "gun",
       "inaccuracy": 3
       "rotationLimit": 15
       "shoot": {
       "type": "shootPattern",
-      "shots": 2,
+      "shots": 3,
       "shotDelay": 5,
 }
         "bullet": {
         "type": "BasicBulletType",
+        "damage": 30,
+        "recoil": 0.2,
+        "height": 5,
+        "width": 8,
+        "speed": 5,
+        "frontColor": "8AA3F4",
+        "backColor": "FFFFFF",
+        "lifetime": 50
+        trailLength: 5
+        trailWidth: 3
+        trailChance: -1
+      trailInterval: 5
+      trailEffect: shootSmokeTitan
+      trailColor: 6697B0
+      trailParam: 4
+      trailRotation: true
+      "homingRange": 60,
+        "homingPower": 0.0845
+        sprite: missile-large
         "despawnEffect": {
           "type": "ParticleEffect",
           "line": true,
           "particles": 40,
           "lifetime": 20,
-          "recoil": 3.25,
           "offset": 10,
           "length": 35,
           "cone": -360,
@@ -96,15 +114,6 @@
           "colorFrom": "8AA3F4",
           "colorTo": "FFFFFF"
         },
-        "damage": 30,
-        "status": "blasted"
-        "recoil": 0.2,
-        "height": 10,
-        "width": 10,
-        "speed": 5,
-        "frontColor": "8AA3F4",
-        "backColor": "FFFFFF",
-        "lifetime": 50
       }
     }
   ]

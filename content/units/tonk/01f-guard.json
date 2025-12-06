@@ -7,7 +7,7 @@ omniMovement: false
 faceTarget: false
 targetAir: true
 shownPlanets: [Stellaris]
-health: 550
+health: 850
 armor: 4
 speed: 0.95
 rotateSpeed: 2.2

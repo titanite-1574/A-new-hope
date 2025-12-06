@@ -1,0 +1,145 @@
+type: tank
+hitSize: 20
+name: Battalion
+description: Shoots out 3 bullets on each barrel that frags on impact dealing large damage
+singleTarget: false
+omniMovement: false
+faceTarget: false
+targetAir: true
+shownPlanets: [Stellaris]
+health: 3403
+armor: 8
+speed: 0.70
+rotateSpeed: 1.8
+itemCapacity: 0
+outlineColor: 26262F
+treadRects: [
+    {
+        x: -25,
+        y: -32,
+        width: 11,
+        height: 73
+    }
+    {
+        x: 14,
+        y: -32,
+        width: 12,
+        height: 72
+    }
+    {
+        x: -26,
+        y: -22,
+        width: 8,
+        height: 11
+    }
+    {
+        x: -5,
+        y: -31,
+        width: 10,
+        height: 72
+    }
+]
+researchCostMultiplier: 1
+weapons: [
+  {
+    x: 0
+    y: 2
+    name: battalion-turret
+    reload: 100
+    mirror: false
+    rotate: true
+    rotateSpeed: 1.57
+    shootSound: gun
+    inaccuracy: 10
+    recoilTime: 90
+     "parts": [
+        {
+          "type": "RegionPart",
+          "suffix": "-barrel-l",
+          "under": true,
+          "mirror": false,
+          "moveY": -4,
+          "progress": "recoil",
+          "recoilIndex": 1,
+          "heatProgress": {
+            "type": "recoil",
+            "op": "blend",
+            "amount": 0,
+            "other": 0,
+            "recoilIndex": 1
+          }
+        },
+        {
+          "type": "RegionPart",
+          "suffix": "-barrel-r",
+          "under": true,
+          "mirror": false,
+          "moveY": -4,
+          "progress": "recoil",
+          "recoilIndex": 0,
+          "heatProgress": {
+            "type": "recoil",
+            "op": "blend",
+            "amount": 0,
+            "other": 0,
+            "recoilIndex": 0
+          }
+        }
+      ],
+      "shoot": {
+          "type": "ShootAlternate",
+          "barrels": 2,
+          "shots": 5,
+          "shotDelay": 10
+          "spread": 10
+      },
+    bullet: {
+      type: BasicBulletType
+      frontColor: 6697B0
+      backColor: 446475
+      speed: 3
+      lifetime: 100
+      damage: 40
+      width: 10
+      height: 10
+      sprite: missile-large
+      trailChance: -1
+      trailInterval: 5
+      trailEffect: colorSpark
+      trailColor: 6697B0
+      shootEffect: shootBig
+      hitEffect: smokeCloud
+      trailLength: 10
+      trailWidth: 2
+      fragOnHit: true
+      fragBullets: 5
+      fragRandomSpread: 360
+      fragLifeMin: 1
+      fragLifeMax: 1
+      fragVelocityMin: 1
+      fragVelocityMax: 1
+      fragSpread: 90
+      fragAngle: 0
+      fragOnAbsorb: true
+      fragBullet: {
+        type: BasicBulletType
+        width: 10
+        height: 10
+        sprite: missile-large
+        frontColor: 6697B0
+        backColor: 446475
+        trailColor: 446475
+        trailWidth: 3
+        trailLength: 26
+        trailRotation: true
+        trailEffect: shootSmokeSquareSparse
+        trailInterval: 4
+        speed: 3
+        lifetime: 6
+        pierceCap: 2
+        damage: 35
+        pierce: true
+         }
+       }
+   }
+]

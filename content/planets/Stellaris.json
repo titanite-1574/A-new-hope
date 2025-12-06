@@ -70,10 +70,10 @@ sectorSize: 1
 parent: Stella
 solarSystem: Staria
 tidalLock: true
-orbitRadius: 4.5
-orbitOffset: 2
+orbitRadius: 6
+orbitOffset: 10
 orbitTime: 100
-orbitSpacing: 0.8
+orbitSpacing: 1
 radius: 0.6
 totalradius: 2.2
 minZoom: 0.8

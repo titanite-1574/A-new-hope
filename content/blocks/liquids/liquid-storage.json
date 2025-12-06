@@ -1,0 +1,22 @@
+type: LiquidRouter
+health: 500
+name: Liquid Storage
+size: 2
+hasLiquids: true
+liquidCapacity: 700
+category: liquid
+requirements: [
+  titanium/40
+  terala/15
+]
+research: {
+  parent: tita-conduit-router
+  objectives: [
+    {
+      type: OnSector
+      preset: outscape
+    }
+  ]
+}
+liquidPadding: 1.8
+researchCostMultiplier: 0.5

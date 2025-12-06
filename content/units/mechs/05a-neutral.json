@@ -22,9 +22,10 @@ targetAir: true
 weapons: [
 {
 name: neutral-weapon
-x: 5.5
+x: 4.5
 y: 0
 mirror: true
+layerOffset: 0
 shoot: {
 type: ShootPattern
 shots: 1

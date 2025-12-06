@@ -1,0 +1,15 @@
+type: CellLiquid
+name: Stelris
+description: A alive liquid that started the "Spread" on Stellaris. Spreads to any building with water source.
+details: What have we done......this is a disaster,we need everyone to evacuate this planet now, we don't want any more consequences. Please leave, IT'S....SPREADING.......THEY....HAVE....MUTATE- .......glitchy sound.........
+temperature: 0
+coolant: false
+color: 5573A0
+colorFrom: 4D6791
+colorTo: 3C5172
+canStayOn: [water]
+explosiveness: 0
+flammability: 0
+incinerable: false
+viscosity: 0.75
+spreadTarget: water

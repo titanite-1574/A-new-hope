@@ -1,9 +1,9 @@
 {
   "name": "Unit Reformer"
-  "description": upgrades units to T3
+  "description": upgrades any units to T3
   "type": "Reconstructor",
   "size": 5,
-  "constructTime": 2400,
+  "constructTime": 2550,
    consumes: {
     power: 5
     liquid: cryofluid/0.4
@@ -35,11 +35,11 @@
     ],
   ],
   "category": "units",
-  "research": "10d-war-refabricator"
+  "research": "10j-naval-refabricator"
   "requirements": [
-    "graphite/300",
-    "titanium/500",
-    "termidium-metal/450"
-    "limite/200"
+    "graphite/100",
+    "titanium/100",
+    "termidium-metal/60"
+    "limite/55"
   ]
 }

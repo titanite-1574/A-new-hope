@@ -1,5 +1,5 @@
 name: Hypercooled Nitrogen
-description: Oh yeah below absolute zero
+description: Nitrogen that is cooled in the Nitrogen Hypercooler. Used in turrets ammunition
 heatCapacity: 0
 explosiveness: 0
 temperature: -0.5

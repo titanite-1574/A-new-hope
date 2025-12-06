@@ -1,0 +1,39 @@
+name: Advance Titanium Bore
+description: Drills out ores from walls.Capable of mining high tier ores.Optimally uses Nitrogen for a boost
+type: beamDrill
+health: 700
+range: 6
+tier: 5
+size: 3
+optionalBoostIntensity: 2.5
+drillTime: 180
+ambientSound: drill
+ambientSoundVolume: 0.08
+hasLiquids: true
+sparkColor: 7A8CDC
+consumes: {
+  power: 0.25
+  liquids: {
+    liquids: [
+      nitrogen/0.0416666666667
+    ]
+    optional: true
+    booster: true
+  }
+}
+buildCostMultiplier: 2
+category: production
+research: 07a-titanium-bore
+researchCost: [
+  titanium/145
+  graphite/100
+  termidium-metal/500
+  florixite/120
+]
+requirements: [
+  titanium/100
+  graphite/50
+  termidium-metal/55
+  florixite/20
+]
+shownPlanets: [Stella]
