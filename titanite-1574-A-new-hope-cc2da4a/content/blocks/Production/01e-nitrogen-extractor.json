@@ -1,0 +1,40 @@
+type: GenericCrafter
+name: Nitrogen Extractor
+description: Extracts nitrogen from the air through powerful suction 
+size: 3
+liquidCapacity: 60
+hasLiquids: true
+health: 850
+category: crafting
+research: 03a-termidium-forge
+itemCapacity: 15
+researchCostMultiplier: 0.5
+requirements: [
+  titanium/170
+  termidium-metal/115
+  terala/80
+  graphite/70
+]
+craftTime: 240
+craftEffect: none
+"outputLiquid": "nitrogen/0.5"
+consumes: {
+  power: 2
+}
+drawer: {
+  type: DrawMulti
+  drawers: [
+          {
+        "type": "DrawDefault"
+      },
+      {
+      type: DrawRegion
+      suffix: -rotator
+      spinSprite: true
+      rotateSpeed: 10
+    }
+  ]
+}
+ambientSound: smelter
+ambientSoundVolume: 0.6
+squareSprite: false

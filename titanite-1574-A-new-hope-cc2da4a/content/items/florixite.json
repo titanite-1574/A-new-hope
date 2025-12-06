@@ -1,0 +1,7 @@
+name: Florixite
+description: A material that is used in advance construction, ammunition and units production 
+research: graphite
+healthScaling: 0.9
+hardness: 5
+mapColor: 84B9E5
+shownPlanets: [Stella]

@@ -1,0 +1,9 @@
+name: "A New Hope"
+displayName: "[#93e2ee[]] A New Hope."
+author: Titan
+description: "[#93e2ee[]] A mod that adds a brand new world with it's solar system"
+version: "1.0"
+subtitle: "[#93e2ee[]] About to release soon!"
+minGameVersion: "152.2"
+dependencies: [ ]
+hidden: false

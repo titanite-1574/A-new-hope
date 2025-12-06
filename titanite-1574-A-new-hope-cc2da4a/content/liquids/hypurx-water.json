@@ -1,0 +1,16 @@
+boilPoint: 0.5
+name: Hypurx Water
+description: A cold liquid that can be found everywhere in the Hypurx biome. Very cold. Boils at 50°c and freezes at -53°c.
+heatCapacity: -0.5
+shownPlanets: [Stella]
+color: 8978B7
+research: {
+  parent: cryofluid 
+  objectives: [
+    tita-pump
+    {
+      type: OnComplete
+      preset: outscape
+    }
+  ]
+}

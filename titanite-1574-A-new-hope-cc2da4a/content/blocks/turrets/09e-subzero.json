@@ -1,0 +1,100 @@
+type: ContinuousLiquidTurret
+name: Subzero
+description: Burn and slows down enemies using nitrogen? 
+size: 3
+health: 2000
+armor: 5
+shootSound: none
+shootWarmupSpeed: 0.1
+shootCone: 360
+requirements: [
+  titanium/450
+  termidium-metal/180
+  terala/210
+  graphite/135
+]
+category: turret
+recoil: 1.5
+liquidConsumed: 0.25
+outlineColor: 2C2A36
+targetAir: true
+targetGround: true
+rotateSpeed: 1.4
+range: 150
+loopSound: laserbeam
+ammoTypes: {
+nitrogen: {
+  type: ContinuousFlameBulletType
+  flareLength: 15
+  flareColor: 7A8CDC
+  hitColor: 7A8CDC
+  length: 150
+  damage: 29
+  buildingDamageMultiplier: 0.25
+  width: 2.5
+  incendChance: 0
+  incendAmount: 0
+  incendSpread: 0
+  colors: [7A8CDC, 7A8CDC, 7A8CDC, 7A8CDC, 7A8CDC]
+ }
+  hypercooled-nitrogen: {
+  type: ContinuousFlameBulletType
+  flareLength: 15
+  flareColor: FFFFFF 
+  hitColor: FFFFFF 
+  length: 150
+  damage: 68
+  buildingDamageMultiplier: 0.15
+  width: 3.25
+  incendChance: 0
+  incendAmount: 0
+  incendSpread: 0
+  colors: [FFFFFF, FFFFFF, FFFFFF, FFFFFF, FFFFFF]
+ }
+}
+shootY: 2.5
+drawer: {
+  type: DrawTurret
+  basePrefix: subzero-
+  parts: [
+         {
+      type: RegionPart
+      suffix: -arm-r
+      mirror: false
+      progress: recoil
+      heatProgress: recoil
+      moveRot: -45
+      under: true
+      heatColor: 8DF9D1
+    }
+    {
+      type: RegionPart
+      suffix: -arm-l
+      mirror: false
+      progress: recoil
+      heatProgress: recoil
+      moveRot: 45
+      under: true
+      heatColor: 8DF9D1
+    }
+        {
+            type: RegionPart
+            suffix: -bladea
+            mirror: true
+            moveX: 5
+            moveY: -3
+            moveRot: -20
+            heatLayerOffset: -0.001
+            under: true
+            heatColor: 87ceeb
+            progress: warmup
+        }
+    ]
+}
+research: 09d-hyperion
+researchCost: [
+  titanium/1500
+  termidium-metal/1000
+  terala/1000
+  graphite/1500
+]

@@ -1,0 +1,15 @@
+{
+  "name": "Plated Titanium Wall"
+  "type": "Wall",
+  "buildCostMultiplier": 0.1,
+  "buildTime": 700
+  "health": 984,
+  "size": 1,
+  "armor": 3,
+  "requirements": [
+    "titanium/5"
+    "graphite/5"
+  ],
+  "research": 08a-Tiradnium 
+  "category": defense
+}

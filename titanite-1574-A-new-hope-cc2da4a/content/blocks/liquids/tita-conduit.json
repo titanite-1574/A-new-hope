@@ -1,0 +1,16 @@
+type: Conduit
+name: Tita Conduit
+description: Transports liquids, What did you expect it to do?
+category: liquid
+research: 08a-Tiradnium 
+requirements: [
+  titanium/1
+]
+health: 35
+leaks: true
+underBullets: true
+researchCostMultiplier: 0.1
+rotBridgeReplacement: t-liquid-bridge 
+researchCost: [
+  titanium/1
+]

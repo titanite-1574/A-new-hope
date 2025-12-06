@@ -1,0 +1,33 @@
+name: Titanium Bore
+description: Drills out ores from walls. Optimally uses cryofluid for a boost
+type: beamDrill
+health: 450
+range: 5
+tier: 3
+size: 2
+optionalBoostIntensity: 2.5
+drillTime: 180
+ambientSound: drill
+ambientSoundVolume: 0.08
+hasLiquids: true
+sparkColor: 7A8CDC
+consumes: {
+  power: 0.25
+  liquids: {
+    liquids: [
+      cryofluid/0.0416666666667
+    ]
+    optional: true
+    booster: true
+  }
+}
+buildCostMultiplier: 2
+category: production
+research: 08a-Tiradnium 
+researchCost: [
+  titanium/8
+]
+requirements: [
+  titanium/30
+]
+shownPlanets: [Stella]

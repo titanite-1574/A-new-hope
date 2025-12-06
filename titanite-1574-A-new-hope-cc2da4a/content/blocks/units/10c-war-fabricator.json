@@ -1,0 +1,40 @@
+{
+  "type": "UnitFactory",
+  "name": War Fabricator
+  "description": Fabricates air units
+  "size": 3,
+  "configurable": false,
+  "fogRadius": 3,
+  "category": "units",
+  "consumes": {
+    "power": 2
+  },
+  "plans": [
+    {
+      "unit": "01a-war",
+      "requirements": [
+        "graphite/20",
+        "termidium-metal/20"
+      ],
+      "time": 2400
+    },
+  ],
+  research: {
+  parent: 10a-neutral-fabricator
+  objectives: [
+    {
+      type: OnSector
+      preset: crossing
+      }
+    ]
+  }
+  "researchCost": [
+    "titanium/500",
+    "graphite/300",
+    "termidium-metal/200"
+  ]
+  "requirements": [
+    "titanium/100",
+    "termidium-metal/120"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Terala Wall"
+  "type": "Wall",
+  "buildCostMultiplier": 0.1,
+  "health": 1084,
+  "buildTime": 750
+  "size": 1,
+  "armor": 5,
+  "requirements": [
+    "titanium/10"
+    "terala/10"
+  ],
+  "research": 02b-large-reinforced-titanium-wall
+  "category": defense
+}

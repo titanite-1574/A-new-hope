@@ -1,0 +1,71 @@
+{
+  "type": "flying",
+  name: Bond
+  description: A healing drone that heals unit
+  "controller": "DefenderAI",
+  "lifetime": 1500,
+  "speed": 3,
+  "rotateSpeed": 4
+  "accel": 0.1,
+  "drag": 0.02,
+  "flying": true,
+  "health": 100,
+  "hitSize": 13,
+  "isEnemy": false,
+  "allowedInPayloads": false,
+  "playerControllable": false,
+  "physics": false,
+  "useUnitCap": true,
+  "createWreck": false,
+  "createScorch": false,
+  "armor": 5,
+  "itemCapacity": 0,
+  "engineOffset": 2,
+  "range": 50,
+  "engineColor": "69C47B",
+  "trailColor": "69C47B",
+  "trailLength": 8,
+  "circleTarget": true,
+  "faceTarget": true,
+ "weapons": [
+    {
+      "type": "RepairBeamWeapon",
+      "mirror": true,
+      "alternate": false,
+      "rotateSpeed": 3,
+      "name": "repairer",
+      "x": 0,
+      "y": 0,
+      "shootY": 1,
+      "reload": 1,
+      "recoil": 0,
+      "shake": 1,
+      "rotate": true,
+      "shootSound": "laser",
+      "laserColor": "69C47B",
+      "controllable": false,
+      "autoTarget": true,
+      "beamWidth": 0.7,
+      "pulseRadius": 6,
+      "pulseStroke": 2,
+      "repairSpeed": 6.25,
+      "bullet": {
+        "shootEffect": {
+          "type": "ParticleEffect",
+          "line": true,
+          "particles": 20,
+          "offset": 35,
+          "lifetime": 22,
+          "length": 35,
+          "cone": -360,
+          "lenFrom": 5,
+          "lenTo": 0,
+          "colorFrom": "69C47B",
+          "colorTo": "69C47B"
+        },
+        "speed": 100,
+        "maxRange": 50
+      }
+    }
+  ]
+}

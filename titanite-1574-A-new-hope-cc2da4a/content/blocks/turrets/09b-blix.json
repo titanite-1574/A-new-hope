@@ -1,0 +1,186 @@
+{
+  "type": "ItemTurret",
+  "name": Blix,
+  "description": Shoot bullets in a helix at normal pace
+  "researchCostMultiplier": 0.2,
+  "size": 3,
+  "health": 480,
+  "reload": 65.7,
+  "shootY": -1,
+  "range": 330,
+  "inaccuracy": 0
+  "targetAir": true,
+  "recoil": 0.7,
+  "rotateSpeed": 2.5,
+  "shootSound": "shootAlt",
+  "minWarmup": 0.9,
+  "drawer": {
+  type: DrawTurret
+  basePrefix: -blix
+  "parts": [
+        {
+      type: RegionPart
+      suffix: -arm-r
+      mirror: false
+      progress: warmup
+      heatProgress: warmup
+      moveRot: 45
+      under: true
+      heatColor: 8DF9D1
+    }
+    {
+      type: RegionPart
+      suffix: -arm-l
+      mirror: false
+      progress: warmup
+      heatProgress: warmup
+      moveRot: -45
+      under: true
+      heatColor: 8DF9D1
+    }
+  ],
+}
+  shoot: {
+  type: shootHelix
+  shots: 1
+  shotDelay: 5
+}
+  "ammoTypes": {
+    "titanium": {
+      type: BasicBulletType
+    width: 16
+    height: 16
+    buildingDamageMultiplier: 0.5
+    hitColor: A3BBEB
+    backColor: A3BBEB
+    frontColor: A3BBEB
+    lightColor: A3BBEB
+    damage: 30
+    speed: 8
+    lifetime: 40
+    despawnEffect: [
+    colorSpark,
+    {
+        type: WaveEffect
+        rotWithParent: true
+        followParent: true
+        lifetime: 12
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: A3BBEB
+        colorTo: A3BBEB
+    }
+    ]
+    pierceCap: 3
+    pierce: true
+    pierceBuilding: true  
+    trailColor: A3BBEB
+    trailInterval: 3
+    trailRotation: true
+    trailLength: 18
+    trailWidth: 2.2
+    trailEffect: colorSpark
+    shootEffect: shootSmokeTitan
+    shrinkX: 0
+    shrinkY: 0
+    },
+    "terala": {
+      type: BasicBulletType
+    width: 16
+    height: 16
+    buildingDamageMultiplier: 0.5
+    hitColor: 84B9E5
+    backColor: 84B9E5
+    frontColor: 84B9E5
+    lightColor: 84B9E5
+    damage: 49
+    range: 500
+    speed: 8
+    lifetime: 40
+    despawnEffect: [
+    colorSpark,
+    {
+        type: WaveEffect
+        rotWithParent: true
+        followParent: true
+        lifetime: 12
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: 5D92BD
+        colorTo: FFFFFF
+    }
+    ]
+    pierceCap: 3
+    pierce: true
+    pierceBuilding: true  
+    trailColor: 84B9E5
+    trailInterval: 3
+    trailRotation: true
+    trailLength: 18
+    trailWidth: 2.2
+    trailEffect: colorSpark
+    shootEffect: shootSmokeTitan
+    shrinkX: 0
+    shrinkY: 0
+    },
+    "graphite": {
+      type: BasicBulletType
+    width: 16
+    height: 16
+    buildingDamageMultiplier: 0.5
+    hitColor: A3BBEB
+    backColor: A3BBEB
+    frontColor: A3BBEB
+    lightColor: A3BBEB
+    damage: 35
+    speed: 8
+    lifetime: 40
+    despawnEffect: [
+    colorSpark,
+    {
+        type: WaveEffect
+        rotWithParent: true
+        followParent: true
+        lifetime: 12
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: A3BBEB
+        colorTo: A3BBEB
+    }
+    ]
+    pierceCap: 2
+    pierce: true
+    pierceBuilding: true  
+    homing: true
+    trailColor: A3BBEB
+    trailInterval: 3
+    trailRotation: true
+    trailLength: 18
+    trailWidth: 2.2
+    trailEffect: colorSpark
+    shootEffect: shootSmokeTitan
+    shrinkX: 0
+    shrinkY: 0
+    }
+  }
+  "requirements": [
+    "graphite/80",
+    "titanium/100",
+    "terala/50"
+  ],
+  "coolant": {
+    "type": "ConsumeLiquid",
+    "liquid": "water",
+    "amount": 0.4
+  },
+  "category": "turret",
+  research: {
+  parent: 09a-armal
+  objectives: [
+    {
+      type: OnSector
+      preset: outscape
+    }
+  ]
+}
+}

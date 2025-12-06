@@ -1,0 +1,127 @@
+type: naval
+name: Ballistic 
+description: A T5 naval unit with a large Tesla coil,a interceptor drone and a defender drone factory. Fires a barrage of missiles at rnemies
+speed: 0.3
+health: 7405
+armor: 20
+aimDst: 10
+range: 100
+drag: 0.1
+accel: 0.8
+hitSize: 35
+rotateSpeed: 2.5
+trailLength: 15
+outlineColor: 575666
+abilities: [
+  {
+    type: UnitSpawnAbility
+    spawnTime: 1250
+    unit: unite
+    spawnX: -10
+    spawnY: -4
+  }
+  {
+    type: UnitSpawnAbility
+    spawnTime: 1250
+    unit: unite
+    spawnX: 10
+    spawnY: -4
+  }
+  {
+    type: UnitSpawnAbility
+    spawnTime: 1270
+    unit: bond
+    spawnX: 10
+    spawnY: 4
+  }
+  {
+    type: UnitSpawnAbility
+    spawnTime: 1270
+    unit: bond
+    spawnX: -10
+    spawnY: 4
+  }
+]
+weapons: [
+   {
+    name: ballistic-heavy-tesla
+    mirror: false
+    rotate: true
+    rotateSpeed: 0.5
+    recoilTime: 500
+    top: true
+    x: 0
+    y: 1
+    reload: 500
+    recoil: 1.25
+    shootSound: shockBlast
+    shake: 15
+    shootY: 23
+    "cooldownTime": 200,
+    "chargeSound": "laserCharge",
+    "shoot": {
+"type": "shootPattern",
+ "shots": 25,
+    "shotDelay": 0,
+}
+    bullet: {
+      type: LightningBulletType
+      width: 5
+      pierceCap: 2
+      lifetime: 45
+      damage: 35
+      speed: 0
+      smokeEffect: colorSpark
+      trailColor: 7A8CDC
+      trailWidth: 1.5
+      trailLength: 5
+      backColor: 7A8CDC
+    }
+  }
+  {
+    name: ballistic-heavy-missile
+    mirror: true
+    rotate: true
+    rotateSpeed: 2
+    x: 17
+    y: -10
+    reload: 100
+    recoil: 1.25
+    shootSound: missile
+    shoot: {
+    type: shootSpread,
+    spread: 5,
+    shots: 5,
+    shotDelay: 5,
+}
+    parts: [
+    {
+    type: RegionPart,
+    suffix: -front
+    layerOffset: -1
+    outlineLayerOffset: 1,
+    mirror: true,
+    moveRot: -3,
+    moveX: 2,
+    moves: [
+   {
+    type: PartMove,
+    progress: recoil,
+    rot: -3
+   }
+   ]
+   progress: warmup
+   }
+   ]
+    bullet: {
+      instantDisappear: true
+      damage: 0
+      spawnUnit: ballistic-missile
+    }
+   }
+]
+research: 06d-cruise
+researchCost: [
+    titanium/500
+    graphite/120
+  ]

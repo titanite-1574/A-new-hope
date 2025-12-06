@@ -1,0 +1,21 @@
+type: RepairTower
+name: Unit Mender
+description: heals unit in a specific radius.Requires cryofluid 
+size: 2
+health: 450
+squareSprite: false
+category: units
+requirements: [
+  graphite/80
+  titanium/80
+  termidium-metal/60
+  terala/60
+]
+research: 01b-neutral-fabricator
+range: 100
+healAmount: 1.5
+consumes: {
+  power: 2
+  liquid: cryofluid/0.5
+}
+researchCostMultiplier: 0.5

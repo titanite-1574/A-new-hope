@@ -1,0 +1,26 @@
+{
+  "localizedName": "Core: Osris",
+  "type": "CoreBlock", 
+  "description": A core from Stella. When destroyed,the sector is lost
+  "health": 1800,
+  "squareSprite": false,
+  "size": 3,
+  "itemCapacity": 5000,
+  "unitCapModifier": 12,
+  "researchCostMultiplier": 0.06,
+  "unitType": "titanite",
+  "isFirstTier": true,
+  "alwaysUnlocked": true
+  "requirements": [
+    "titanium/700",
+    "termidium-metal/200",
+    "graphite/300"
+  ],
+   "category": "effect",
+   research: {
+    planet: Stella
+    root: true
+    name: Stella
+    requiresUnlock: false
+  }
+}

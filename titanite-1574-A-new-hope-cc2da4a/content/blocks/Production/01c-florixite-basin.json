@@ -1,0 +1,89 @@
+type: GenericCrafter
+name: Florixite Basin
+description: Combines water with titanium and terala to make florixite 
+size: 3
+liquidCapacity: 60
+hasLiquids: true
+health: 850
+category: crafting
+research: 01b-cryofluid-liquidizer
+itemCapacity: 15
+researchCostMultiplier: 0.5
+requirements: [
+  titanium/170
+  termidium-metal/115
+  terala/40
+]
+craftTime: 240
+craftEffect: none
+outputItems: [
+  florixite/5
+]
+consumes: {
+  items: [
+    titanium/3
+    terala/3
+  ]
+  liquids: [
+    water/0.0833333333
+  ]
+  power: 2
+}
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: water
+      padLeft: 15.5
+      padTop: 15.5
+      padBottom: 1.5
+      padRight: 1.5
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: water
+      padRight: 15.5
+      padTop: 15.5
+      padBottom: 1.5
+      padLeft: 1.5
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: water
+      padLeft: 15.5
+      padBottom: 15.5
+      padTop: 1.5
+      padRight: 1.5
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: water
+      padRight: 15.5
+      padBottom: 15.5
+      padTop: 1.5
+      padLeft: 1.5
+    }
+     {
+      type: DrawLiquidTile
+      drawLiquid: water 
+      padding: 2
+    }
+    {
+      type: DrawRegion
+      suffix: -rotator
+      spinSprite: true
+      rotateSpeed: 2
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+ambientSound: smelter
+ambientSoundVolume: 0.6
+squareSprite: false

@@ -1,0 +1,21 @@
+{
+  "localizedName": "Core: Frontier",
+  "type": "CoreBlock", 
+  "description": A core upgraded from tidama
+  "health": 2800,
+  "squareSprite": false,
+  "size": 4,
+  "itemCapacity": 8500,
+  "unitCapModifier": 12,
+  "researchCostMultiplier": 0.06,
+  "unitType": "hope",
+  "isFirstTier": true,
+  "alwaysUnlocked": true
+  "requirements": [
+    "titanium/1700",
+    "termidium-metal/1200",
+    "graphite/1300"
+    "terala/1000"
+  ],
+   "category": "effect",
+}

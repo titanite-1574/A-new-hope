@@ -1,0 +1,8 @@
+name: Holosteel
+description: A metal with a high charge. Used in turrets,ammunition and construction 
+charge: 0.1
+research: florixite 
+healthScaling: 0.9
+frames: 7
+frameTime: 10
+shownPlanets: [Stella]

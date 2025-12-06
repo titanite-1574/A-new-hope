@@ -1,0 +1,7 @@
+type: OreBlock
+name: Limite Ore
+itemDrop: limite
+wallOre: true
+variants: 2
+mineAble: true
+tier: 1

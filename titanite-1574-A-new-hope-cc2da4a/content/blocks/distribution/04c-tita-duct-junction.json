@@ -1,0 +1,13 @@
+type: Junction
+name: Tita Junction
+description: Allow for ducts to cross each other. 
+health: 65
+size: 1
+speed: 22
+requirements: [
+  titanium/1
+]
+squareSprite: false
+category: distribution
+research: 04b-tita-duct-router
+researchCostMultiplier: 0.1

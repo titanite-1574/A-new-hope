@@ -1,0 +1,16 @@
+type: Duct
+name: Tita Duct
+description: Transport item at high speed using magnetic forces
+category: distribution
+alwaysUnlocked: false
+research: 08a-Tiradnium 
+researchCost: [
+  titanium/1
+]
+speed: 5
+health: 45
+bridgeReplacement: 04d-tita-duct-bridge
+requirements: [
+  titanium/1
+]
+junctionReplacement: 04c-tita-duct-junction

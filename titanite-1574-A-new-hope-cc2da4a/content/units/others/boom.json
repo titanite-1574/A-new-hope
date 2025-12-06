@@ -1,0 +1,55 @@
+type: flying
+name: RS
+hidden: false
+hittable: false
+drawBody: false  
+drawCell: false
+health: 1000000
+speed: 0
+physics: false
+weapons: [
+    {
+        shootOnDeath: true
+        reload: 1
+        alwaysShooting: true   
+        ignoreRotation: true
+        shootCone: 360
+        shootSound: huge-explosion
+        shake: 600
+        bullet: {
+            killShooter: true
+            type: BasicBulletType
+            splashDamageRadius: 11200
+            splashDamage: 100
+            splashDamagePierce: true
+            width: 0.000001
+            height: 0.000001
+            damage: 0
+            instantDisappear: true
+            collides: false
+            despawnEffect: {
+            type: MultiEffect
+                lifetime: 1920
+                effects: [
+                    {
+                        type: ExplosionEffect
+                        smokeColor: 7A8CDC
+                        smokeRad: 200
+                        smokes: 60
+                        smokeSize: 10
+                        smokeSizeBase: 20
+                        sparkColor: 7A8CDC
+                        sparkLen: 20
+                        sparkRad: 64
+                        sparks: 64
+                        sparkStroke: 4
+                        waveColor: c2ba9c
+                        waveLife: 240
+                        waveRad: 200
+                        lifetime: 360
+                    }
+                ]
+            }
+        }
+    }
+]

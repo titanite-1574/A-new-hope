@@ -1,0 +1,10 @@
+type: Floor
+name: Hypurx Water
+speedMultiplier: 0.5
+variants: 3
+liquidDrop: hypurx-water
+liquidMultiplier: 1.666666666
+isLiquid: true
+cacheLayer: water
+albedo: 0.9
+supportsOverlay: true

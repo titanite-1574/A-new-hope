@@ -1,0 +1,6 @@
+name: Benite
+description: A radioactive material which emits small amounts of radiation 
+research: florixite 
+radioactivity: 0.15
+healthScaling: 0.10
+shownPlanets: [Stella]

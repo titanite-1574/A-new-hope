@@ -1,0 +1,36 @@
+{
+  "name": "War Refabricator"
+  "description": Refabricates units to T2
+  "type": "Reconstructor",
+  "size": 3,
+  "constructTime": 2400,
+   consumes: {
+    power: 5
+    liquid: cryofluid/0.4
+    items: [
+        termidium-metal/45
+        titanium/30
+    ]
+}
+  "upgrades": [
+    [
+      "01a-war",
+      "01b-conflict"
+    ]
+  ],
+  "category": "units",
+research: {
+    parent: "10b-neutral-refabricator"
+    objectives: [
+        {
+            type: "OnSector"
+            preset: "sidial"
+         }
+      ]
+   }
+   "requirements": [
+    "titanium/130",
+    "termidium-metal/150"
+    "terala/50"
+  ]
+}

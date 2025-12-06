@@ -1,0 +1,14 @@
+type: DirectionLiquidBridge
+name: Tita Conduit Bridge 
+size: 1
+health: 65
+range: 4
+requirements: [
+  titanium/10
+]
+category: liquid
+squareSprite: false
+research: tita-conduit-router
+researchCost: [
+  titanium/10
+]

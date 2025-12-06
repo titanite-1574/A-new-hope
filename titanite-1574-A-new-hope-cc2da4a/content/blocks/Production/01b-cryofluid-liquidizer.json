@@ -1,0 +1,66 @@
+ "type": "GenericCrafter",
+ "name": Cryofluid Liquidizer 
+  "health": 300,
+  "size": 2,
+  "hasItems": true,
+  "craftTime": 60,
+  "craftEffect": "none",
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+                 {
+        "type": "DrawRegion"
+        suffix: -bottom
+        }
+                        {
+        "type": "DrawLiquidRegion"
+        suffix: -liquid
+        drawLiquid: cryofluid
+        }
+                {
+              "type": "DrawRegion"
+        suffix: -rotator
+        rotateSpeed: 1
+        spinSprite: true
+  }
+          {
+      "type": "DrawDefault"
+        }
+                  {
+      "type": "DrawGlowRegion"
+        suffix: -glow
+        }
+        ]
+        }
+  "hasPower": true,
+  "hasLiquids": true,
+ liquidCapacity: 70
+  "updateEffect": "none",
+  "consumes": {
+  "power": 0.70,
+    "liquids": [
+      "water/0.5"
+    ],
+    items: [
+      titanium/2
+    ]
+  },
+  "requirements": [
+    titanium/20
+    graphite/20
+  ],
+  "category": "crafting",
+  "outputLiquid": "cryofluid/0.5"
+research: {
+    parent: "01a-termidium-forge",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "sidial"
+        }
+    ]
+},
+researchCost: [
+    titanium/50
+    graphite/40
+  ]
