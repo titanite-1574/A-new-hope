@@ -1,9 +1,0 @@
-name: Cryostone Vent
-type: SteamVent
-blendGroup: cryostone
-parent: cryostone
-effect: ventSteam
-effectColor: 758A99
-attributes: {
-   steam: 1
-}

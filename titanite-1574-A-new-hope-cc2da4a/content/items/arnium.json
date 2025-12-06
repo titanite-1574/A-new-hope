@@ -1,6 +1,0 @@
-name: Armium
-description: A radioactive material which is produced by the Arnite Fission Synthetiser. Used in nuclear reactors and ammunition 
-research: florixite 
-radioactivity: 1
-healthScaling: 0.9
-shownPlanets: [Stella]

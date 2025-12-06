@@ -1,6 +1,0 @@
-name: Klorigen
-description: A gas that is extracted from vents using the vent extractor. Mainly used in reactors and producing Benite
-gas: true
-temperature: 0.25
-heatCapacity: 0.9
-color: FFF093
