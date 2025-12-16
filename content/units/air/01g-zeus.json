@@ -3,7 +3,7 @@
   description : The king of Stella's sky,powered by 3 nuclear reactors and equipped with powerful cannons,missile and an energy field. It is classified as an Elion class unit due to it's sheer size and insane health . This is only the beginning but what are the Elions for, destroying bases or defending Stella from something?
   shownPlanets: [Stella]
     "research": {
-    "parent": "01f-dread",
+    "parent": "01f-blazon",
     "requirements": [
       "graphite/2000",
       "titanium/2500"
@@ -38,14 +38,13 @@ spread: 0
 ]
 "parts": [
 {
-        type: RegionPart
-        suffix: -reactor
-        blending: additive
-        color: ff0000
-        mirror: false
-        outline: false
-        layer: 70.2
-},
+    type: RegionPart
+    suffix: -glow
+    blending: additive
+    color: ffffff33
+    outline: false
+    mirror: false
+  }
 {
 "type": "shapePart",
 "y": -16,

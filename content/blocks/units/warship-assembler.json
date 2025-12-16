@@ -36,7 +36,7 @@ plans: [
   },
   {
    type: AssemblerUnitPlan
-   unit: 01f-dread
+   unit: 01f-blazon
    requirements: [
      a-new-hope-01c-dispute/5
      a-new-hope-02f-large-holosteel-wall/15

@@ -9,7 +9,7 @@
     liquid: cryofluid/0.4
     items: [
         titanium/50
-        graphite/90
+        limite/90
         termidium-metal/70
     ]
 }

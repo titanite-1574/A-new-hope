@@ -4,11 +4,6 @@
     research: {
   parent: 01d-peace-fabricator
   shownPlanets: [Stella]
-  researchCost: [
-  titanium/200
-  termidium-metal/250
-  graphite/200
-  ]
   objectives: [
     {
       type: OnSector
@@ -27,39 +22,22 @@
   "armor": 1,
   "itemCapacity": 0,
   "outlineColor": "575666",
-  "engineOffset": 6,
+  "engineOffset": 4,
   "engineColor": "69C47B",
   "faceTarget": true,
-  "abilities": [
+   parts: [
    {
-      "type": "EnergyFieldAbility",
-      "healEffect": {
-        "type": "ParticleEffect",
-        "line": true,
-        "particles": 7,
-        "lifetime": 20,
-        "offset": 50,
-        "length": 55,
-        "cone": -360,
-        "lenFrom": 6,
-        "lenTo": 0,
-        "colorFrom": "69C47B",
-        "colorTo": "66B1FFFF"
-      },
-      "statusDuration": 300,
-      "status": "shocked",
-      "color": "69C47B",
-      "maxTargets": 3,
-      "damage": 5,
-      "healPercent": 0.3,
-      "range": 50,
-      "y": 0,
-      "sectors": 2,
-      "rotateSpeed": 2,
-      "hitBuildings": true,
-      "sectorRad": 0.5,
-      "effectRadius": 1,
-      "reload": 19
+        suffix : -wing
+        type : RegionPart
+         mirror: true
+         under: false
+         moveX: 2
+layerOffset: -0.0001
+         moveY: 0
+         moveRot: 45
+         progress: warmup
+          x: 3.5
+          y: -1.3
     }
   ]
      "weapons": [
@@ -70,7 +48,7 @@
       "alternate": true,
       "top": false,
       "layerOffset": 0.001,
-      "rotate": true,
+      "rotate": false,
       "rotateSpeed": 5,
       "x": 0,
       "y": 0,
@@ -112,7 +90,7 @@
           "colorFrom": "69C47B",
           "colorTo": "FFFFFF"
         },
-        "damage": 3,
+        "damage": 5,
         "status": "shocked"
         "height": 5,
         "width": 5,

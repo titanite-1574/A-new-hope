@@ -11,12 +11,12 @@ mesh: [{
     divisions: 5
     seed: 95
     radius: 0.5
-    color1: 62ABC1
-    color2: 488FA6
+    color1: 4E5582
+    color2: 6878A5
     octaves: 3
-    persistence: 1.5
-    mag: 1
-    scl: 2
+    persistence: 1
+    mag: 0.5
+    scl: 1
     }
     {
     //stellastonebiome
@@ -25,27 +25,14 @@ mesh: [{
     divisions: 5
     seed: 52
     radius: 0.5
-    color1: 7899A3
-    color2: 5D7F8A
+    color1: 45397A
+    color2: 4E3E94
     octaves: 3
     persistence: 1.5
     }
   ]
-cloudMesh: [
-   {
-   type: HexSkyMesh
-   planet: Stellaris
-   speed: 1.1
-   radius: 0.194
-   divisions: 6
-   color: e2effc60
-   octaves: 3
-   persistence: 0.3
-   scl: 0.9
-   thresh: 0.45
-   }
-]
 
+atmosphereColor: 6878A5
 allowCampaignRules: true
 allowLaunchLoadout: false
 allowLaunchSchematics: false
@@ -56,6 +43,8 @@ allowSelfSectorLaunch: false
 allowWaveSimulation: false
 
 iconColor: 98c1f5
+atmosphereRadIn: 0.007
+atmosphereRadOut: 0.15
 landCloudColor: e2effc60
 hasAtmosphere: true
 bloom: false
@@ -70,11 +59,11 @@ sectorSize: 1
 parent: Stella
 solarSystem: Staria
 tidalLock: true
-orbitRadius: 6
+orbitRadius: 12
 orbitOffset: 10
 orbitTime: 100
 orbitSpacing: 1
-radius: 0.6
+radius: 0.56
 totalradius: 2.2
 minZoom: 0.8
 

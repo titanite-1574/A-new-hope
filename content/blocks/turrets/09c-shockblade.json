@@ -199,7 +199,7 @@ moveWhileCharging: false
   objectives: [
     {
       type: OnSector
-      preset: sidial
+      preset: hypurx-river
     }
   ]
 }

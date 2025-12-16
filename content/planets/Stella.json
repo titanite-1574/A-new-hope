@@ -12,12 +12,26 @@ mesh: [
     divisions: 5
     seed: 95
     radius: 1.120
-    color1: 62ABC1
-    color2: 488FA6
+    color1: 748689
+    color2: 708281
     octaves: 3
     persistence: 1.1
     mag: 1.6
     scl: 5
+    }
+    {
+    //cryobiome
+    type: NoiseMesh
+    planet: Stella
+    divisions: 3
+    seed: 35
+    radius: 1.120
+    color1: 786AA1
+    color2: 9182BD
+    octaves: 1
+    persistence: 0.2
+    mag: 0.9
+    scl: 3
     }
     {
     //stellastonebiome
@@ -26,8 +40,8 @@ mesh: [
     divisions: 5
     seed: 52
     radius: 1.100
-    color1: 4C515D
-    color2: 4C515D
+    color1: 495269
+    color2: 4D5157
     octaves: 3
     persistence: 1.1
     }
@@ -35,12 +49,12 @@ mesh: [
 cloudMesh: [
    {
    type: HexSkyMesh
-   planet: frostnova
+   planet: Stella
    seed: 3
    speed: 0.45
    radius: 0.15
    divisions: 5
-   color: e2effc60
+   color: 70828184
    octaves: 3
    persistence: 0.3
    scl: 1
@@ -65,8 +79,8 @@ allowSelfSectorLaunch: true
 allowCampaignRules: true
 
 hasAtmosphere: true
-iconColor: 62ABC1
-landCloudColor: 488FA6
+iconColor: 748689
+landCloudColor: 708281d4
 updateLighting: false
 bloom: false
 lighting: true

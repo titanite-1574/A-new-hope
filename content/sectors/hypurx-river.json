@@ -1,0 +1,15 @@
+localizedName: Hypurx River
+planet: Stella
+description: There's seem to be a river here just like in outpost,out radar detected something large is approaching our base. Use the new Shockblade turret to defend yourself 
+sector: 109
+difficulty: 3
+research: {
+  parent: outpost
+  objectives: [
+    {
+      type: SectorComplete
+      preset: outpost
+    }
+  ]
+}
+alwaysUnlock: false

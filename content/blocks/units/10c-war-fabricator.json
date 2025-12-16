@@ -24,7 +24,7 @@
   objectives: [
     {
       type: OnSector
-      preset: crossing
+      preset: outpost
       }
     ]
   }

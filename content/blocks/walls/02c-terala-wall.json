@@ -1,5 +1,6 @@
 {
   "name": "Terala Wall"
+  "description": A tougher wall made from Terala
   "type": "Wall",
   "buildCostMultiplier": 0.1,
   "health": 1084,

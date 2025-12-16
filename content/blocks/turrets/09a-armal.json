@@ -2,13 +2,14 @@
   "type": "ItemTurret",
   "name": Armalx,
   "researchCostMultiplier": 0.2,
-  "size": 2,
+  "size": 3,
   "health": 240,
   "reload": 110,
   "range": 230,
   "targetAir": true,
   "recoil": 0.7,
   "rotateSpeed": 3,
+  "shootY": 0
   "shootSound": "shootAlt",
   "drawer": {
   type: DrawTurret
@@ -18,7 +19,7 @@
       type: RegionPart
       suffix: -heat
       progress: recoil
-      heatProgress: recoil
+      heatProgress: heat
       mirror: false
       under: false
       outline: false

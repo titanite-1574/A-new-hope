@@ -12,7 +12,7 @@
   "isFirstTier": true,
   "alwaysUnlocked": true
   "requirements": [
-    "titanium/700",
+    "titanium/500",
     "termidium-metal/200",
     "graphite/300"
   ],

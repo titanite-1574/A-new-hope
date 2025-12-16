@@ -1,5 +1,6 @@
 {
-  "name": "Plated Titanium Wall"
+  "name": "Reinforced Titanium Wall"
+  "description": A stronger version of the titanium wall reinforced with graphite
   "type": "Wall",
   "buildCostMultiplier": 0.1,
   "buildTime": 700

@@ -1,0 +1,210 @@
+{
+  "type": "ItemTurret",
+  "name": Gala,
+  "description": Shoots a barrage of explosive bullets at both enemy air and ground
+  "researchCostMultiplier": 0.2,
+  "size": 4,
+  "health": 800,
+  "reload": 10,
+  "range": 500,
+  "inaccuracy": 5
+  "targetAir": true,
+  "targetGround": true
+  "recoil": 1,
+  "recoils": 4
+  "collidesGround": false
+  "rotateSpeed": 2.5,
+  "shootSound": "shootBig",
+  "shootWarmupSpeed": 0.01,
+  minWarmup: 0.4
+moveWhileCharging: false
+    "shoot": {
+        "type": "ShootMulti",
+        "source": {
+          "type": "ShootAlternate",
+          "barrels": 4,
+          "shots": 1,
+          "spread": 5
+        },
+        "dest": [
+          {
+            "type": "ShootPattern",
+            "shots": 1
+          }
+        ]
+      },
+  drawer: {
+  type: DrawTurret
+  basePrefix: gala-
+    parts: [
+    {
+      type: RegionPart
+      suffix: -barrel1
+      progress: recoil
+      heatProgress: recoil
+      moveY: -2
+      under: true
+      heatColor: 8DF9D1
+      recoilIndex: 0
+    }
+    {
+      type: RegionPart
+      suffix: -barrel2
+      progress: recoil
+      heatProgress: recoil
+      moveY: -2
+      under: true
+      heatColor: 8DF9D1
+      recoilIndex: 1
+    }
+   {
+      type: RegionPart
+      suffix: -barrel3
+      progress: recoil
+      heatProgress: recoil
+      moveY: -2
+      under: true
+      heatColor: 8DF9D1
+      recoilIndex: 2
+    }
+    {
+      type: RegionPart
+      suffix: -barrel4
+      progress: recoil
+      heatProgress: recoil
+      moveY: -2
+      under: true
+      heatColor: 8DF9D1
+      recoilIndex: 3
+    }
+  ]
+}
+  "ammoTypes": {
+    "florixite": {
+      type: BasicBulletType
+    width: 16
+    height: 16
+    buildingDamageMultiplier: 0.5
+    hitColor: 9959A3
+    backColor: 522F56
+    frontColor: B48BBA
+    lightColor: 9959A3
+    damage: 30
+    speed: 10
+    lifetime: 40
+    collidesGround: true
+    despawnEffect: [
+    colorSpark,
+    {
+        type: WaveEffect
+        rotWithParent: true
+        followParent: true
+        lifetime: 12
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: A3BBEB
+        colorTo: A3BBEB
+    }
+    ]
+    pierceCap: 3
+    pierce: true
+    pierceBuilding: true  
+    trailColor: B48BBA
+    trailInterval: 3
+    trailRotation: true
+    trailLength: 18
+    trailWidth: 2.2
+    trailEffect: colorSpark
+    shootEffect: shootSmokeTitan
+    shrinkX: 0
+    shrinkY: 0
+    fragOnHit: true
+      fragBullets: 10
+      fragRandomSpread: 360
+      fragLifeMin: 1
+      fragLifeMax: 1
+      fragVelocityMin: 1
+      fragVelocityMax: 1
+      fragSpread: 90
+      fragAngle: 0
+      fragOnAbsorb: true
+      fragBullet: {
+        type: BasicBulletType
+        width: 10
+        height: 10
+        sprite: a-new-hope-dis-point 
+        frontColor: B48BBA
+        backColor: 9959A3
+        trailColor: B48BBA
+        speed: 1
+        damage: 10
+        trailWidth: 3
+        trailLength: 26
+        trailRotation: true
+        trailEffect: shootSmokeSquareSparse
+      }
+    },
+    "titanium": {
+      type: BasicBulletType
+    width: 16
+    height: 16
+    buildingDamageMultiplier: 0.5
+    hitColor: A3BBEB
+    backColor: A3BBEB
+    frontColor: A3BBEB
+    lightColor: A3BBEB
+    damage: 50
+    speed: 10
+    lifetime: 40
+    collidesGround: false
+    despawnEffect: [
+    colorSpark,
+    {
+        type: WaveEffect
+        rotWithParent: true
+        followParent: true
+        lifetime: 12
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: A3BBEB
+        colorTo: A3BBEB
+    }
+    ]
+    pierceCap: 3
+    pierce: true
+    pierceBuilding: true  
+    trailColor: A3BBEB
+    trailInterval: 3
+    trailRotation: true
+    trailLength: 18
+    trailWidth: 2.2
+    trailEffect: colorSpark
+    shootEffect: shootSmokeTitan
+    shrinkX: 0
+    shrinkY: 0
+    },
+  }
+  "requirements": [
+    "graphite/390",
+    "titanium/300",
+    "terala/230",
+    "termidium-metal/300"
+    "florixite/200"
+    "limite/100"
+  ],
+  "coolant": {
+    "type": "ConsumeLiquid",
+    "liquid": "water",
+    "amount": 0.4
+  },
+  "category": "turret",
+  research: {
+  parent: 09c-shockblade
+  objectives: [
+    {
+      type: SectorComplete
+      preset: sidial
+    }
+  ]
+}
+}

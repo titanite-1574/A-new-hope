@@ -1,6 +1,6 @@
 type: ShieldWall
 name: Holosteel Wall
-description: A shield wall made from holosteel
+description: A shield wall made from holosteel. Able to deflect enemy bullets
 size: 1
 health: 1600
 armor: 7.5

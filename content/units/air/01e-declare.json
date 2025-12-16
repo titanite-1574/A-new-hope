@@ -54,34 +54,210 @@
   "faceTarget": true,
       "weapons": [
     {
-    name: "variance-railgun"
-    x: 0
-    y: 0
-    reload: 180
-    rotate: false
-    mirror: false
-    shootSound: railGunBlast 
-    shake: 5
-    bullet: {
-    type: BasicBulletType
-        damage: 625
-        recoil: 1.5
-        splashDamage: 80.75
-        splashDamageRadius: 30
-        speed: 10
-        lifetime: 35
-        pierce: true
-        pierceCap: 5
-        trailEffect: shootSmokeTitan
-        trailColor: 7A8CDC
-        trailChance: -1
-        trailParam: 4
-        trailInterval: 4
-        trailRotation: true
-        trailLength: 8
-        trailWidth: 4
-        }
+shootY: 10
+name: ele-gun
+x: 0
+y: 0
+recoil: 0
+mirror: false
+reload: 600
+parts: [
+{
+type: ShapePart
+circle: true
+y: 10
+radius: 0
+radiusTo: 15
+colorFrom: 8AA3F3
+colorTo: B4C2ED
+progress: charge
+under: true
+layer: 110
   }
+{
+under: true
+type: RegionPart
+moveRot: 35
+mirror: true
+moveX: -2
+suffix: -arm
+progress: warmup
+  }
+]
+shootSound: holostarImpact 
+shoot: {
+  firstShotDelay: 100
+    }
+shootStatusDuration: 100
+shootStatus: unmoving
+bullet: {
+  type: BulletType
+  damage: 2400
+  speed: 4
+  lifetime: 200
+  shootEffect: {
+    type: MultiEffect
+    effects: [
+{
+type: WaveEffect
+sizeTo: 150
+strokeFrom: 6
+colorTo: 8AA3F3
+lifetime: 25
+layer: 110
+  }
+      {
+type: ParticleEffect
+particles: 12
+sizeFrom: 10
+length: 120
+layer: 110
+cone: 5
+offsetX: 0
+colorTo: 8AA3F3
+colorFrom: B4C2ED
+  }
+      {
+type: ParticleEffect
+particles: 12
+sizeFrom: 10
+length: 120
+layer: 110
+cone: 5
+offsetX: 5
+colorTo: 8AA3F3
+colorFrom: B4C2ED
+  }
+      {
+type: ParticleEffect
+particles: 12
+sizeFrom: 10
+length: 120
+cone: 5
+layer: 110
+offsetX: -5
+colorTo: 8AA3F3
+colorFrom: B4C2ED
+  }
+      {
+type: ParticleEffect
+particles: 12
+layer: 110
+sizeFrom: 10
+length: 120
+cone: 5
+offsetX: 10
+colorTo: 8AA3F3
+colorFrom: B4C2ED
+  }
+      {
+type: ParticleEffect
+particles: 12
+sizeFrom: 10
+layer: 110
+length: 120
+cone: 5
+offsetX: -10
+colorTo: 8AA3F3
+colorFrom: B4C2ED
+  }
+      {
+type: ParticleEffect
+particles: 12
+sizeFrom: 10
+layer: 110
+length: 120
+cone: 5
+offsetX: 15
+colorTo: 8AA3F3
+colorFrom: B4C2ED
+  }
+      {
+type: ParticleEffect
+particles: 12
+sizeFrom: 10
+length: 120
+cone: 5
+offsetX: -15
+colorTo: 8AA3F3
+layer: 110
+colorFrom: B4C2ED
+  }
+      {
+type: ParticleEffect
+particles: 12
+sizeFrom: 10
+length: 120
+cone: 5
+offsetX: 20
+layer: 110
+colorTo: 8AA3F3
+colorFrom: B4C2ED
+  }
+      {
+type: ParticleEffect
+particles: 12
+layer: 110
+sizeFrom: 10
+length: 120
+cone: 5
+offsetX: -20
+colorTo: 8AA3F3
+colorFrom: B4C2ED
+  }
+]
+  }
+  hitEffect: none
+  despawnEffect: {
+    type: WaveEffect
+    lifetime: 150
+    interp: pow10Out
+    colorFrom: B4C2ED
+    colorTo: 8AA3F3
+    layer: 110
+    strokeFrom: 8
+    strokeTo: 0
+      }
+  bulletInterval: 10
+  intervalBullets: 3
+  smokeEffect: none
+  intervalBullet: {
+    type: LightningBulletType
+    damage: 300
+    lightningLength: 50
+    lightningColor: 8AA3F3
+    length: 8
+    stroke: 5
+    lightColor: 8AA3F3
+    hitEffect: hitLancer
+    lifetime: 15
+    lightningType: {
+        type: LightningBulletType
+        status: electrified
+        lightningLength: 4
+        damage: 65
+        lightningColor: f890ff
+        hitEffect: hitLancer
+        despawnSound: spark
+          }
+  }
+    pierceCap: 40
+    pierce: true
+    pierceBuilding: true
+    collidesAir: false
+    hitSize: 48
+    sprite: none
+    parts: [{
+type: ShapePart
+circle: true
+y: 0
+radius: 15
+colorFrom: B4C2ED
+colorTo: 8AA3F3
+  }
+      ]
+      }
+}
     {
       "name": "declare-mount",
       "rotate": true

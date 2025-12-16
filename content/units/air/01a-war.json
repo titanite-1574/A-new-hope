@@ -4,22 +4,8 @@
     research: {
   parent: 10c-war-fabricator 
   shownPlanets: [Stella]
-  researchCost: [
-  titanium/100
-  termidium-metal/100
-  graphite/100
-  ]
-  objectives: [
-    {
-      type: OnSector
-      preset: outscape
-    }
-  ]
-}
-researchCost: [
-    titanium/50
-    graphite/30
-  ]
+  alwaysUnlocked: true
+  }
   "type": "flying",
   "lowAltitude": true,
   "speed": 3.5,

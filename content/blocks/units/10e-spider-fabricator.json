@@ -24,7 +24,7 @@
     objectives: [
         {
             type: "CompleteSector",
-            preset: "crossing"
+            preset: "outpost"
         }
     ]
 }

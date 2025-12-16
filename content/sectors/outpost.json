@@ -1,0 +1,14 @@
+localizedName: Outpost
+planet: Stella
+description: A small enemy outpost has been spotted on the other side of the river,ground units are useless here so research the aerial units and destroy the outpost
+sector: 98
+difficulty: 2
+research: {
+  parent: outscape
+  objectives: [
+    {
+      type: SectorComplete
+      preset: outscape
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+type: MessageBlock
+size: 1
+health: 65
+requirements: [
+  titanium/10
+]
+category: logic
+research: 08a-Tiradnium 
+researchCost: [
+  titanium/50
+]

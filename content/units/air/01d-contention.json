@@ -43,13 +43,10 @@
       "weapons": [
   {
       "name": "dispute-cannon",
-      "shootCone": 15,
       "mirror": false,
       "alternate": true,
       "top": false,
-      "layerOffset": 0.001,
-      "rotate": false,
-      "rotateSpeed": 3,
+      "layerOffset": 1
       "shake": 2
       "x": 0,
       "y": 0,
@@ -57,10 +54,11 @@
       "reload": 500,
       "recoil": 1
       "shootSound": "holostarImpact",
-      "shootStatusDuration": 90,
-      "chargeSound": lasercharge
+      "shootStatusDuration": 130,
+      "shootStatus": unmoving,
+      "chargeSound": chargeup
       "shoot": {
-      "firstShotDelay": 170,
+      "firstShotDelay": 130,
       },
        "parts": [
         {
@@ -113,7 +111,7 @@
           "followParent": true,
           "rotWithParent": true,
           "type": "multiEffect",
-          "lifetime": 170,
+          "lifetime": 130,
           "effects": [
             {
               "type": "ParticleEffect",
@@ -125,7 +123,7 @@
               "baseLength": -60,
               "interp": "pow3In",
               "sizeInterp": "pow5Out",
-              "lifetime": 170,
+              "lifetime": 130,
               "colorFrom": "6b7adc8e",
               "colorTo": "6a7adc4b"
             },
@@ -139,7 +137,7 @@
               "baseLength": -70,
               "interp": "pow3In",
               "sizeInterp": "pow5Out",
-              "lifetime": 160,
+              "lifetime": 130,
               "colorFrom": "6b7adc8e",
               "colorTo": "6a7adc4b"
             },
@@ -153,7 +151,7 @@
               "baseLength": -80,
               "interp": "pow3In",
               "sizeInterp": "pow5Out",
-              "lifetime": 150,
+              "lifetime": 140,
               "colorFrom": "6b7adc8e",
               "colorTo": "6a7adc4b"
             },
